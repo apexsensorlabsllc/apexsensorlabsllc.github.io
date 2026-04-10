@@ -21,8 +21,6 @@ hide:
 ### Coming Soon
 **Apex Core** and the full suite of local-first sensors are currently in final development. We are building the infrastructure for a smart home that respects your privacy and works entirely without the cloud.
 
-[ :simple-github: Follow the Progress](https://github.com/apexsensorlabs){ .md-button }
-
 </div>
 
 <p align="center" style="opacity: 0.5; font-size: 0.8rem; margin-top: 4rem;">
