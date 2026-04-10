@@ -1,0 +1,65 @@
+site_name: Apex Sensor Labs
+# site_url: https://docs.apexsensorlabs.com/ # Reactivate when your custom domain is linked
+site_url: https://apexsensorlabsllc.github.io/
+
+theme:
+  name: material
+  logo: assets/apex_logo_dark_transparent_black_filled.png
+  favicon: assets/apex_logo_dark_transparent_black_filled.png
+  palette:
+    scheme: slate
+    primary: custom
+    accent: custom
+  font:
+    text: Inter
+    code: DM Mono
+  features:
+    # Minimal features for the landing page
+    - content.code.copy
+    # - navigation.tabs      # Hidden for Coming Soon
+    # - navigation.sections  # Hidden for Coming Soon
+    # - navigation.top       # Hidden for Coming Soon
+
+# This hides the search bar so people can't "search" for hidden docs
+plugins:
+  - search:
+      enabled: false
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/apexsensorlabs
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# ONLY the Home page is visible for now
+nav:
+  - Home: index.md
+
+# --- THE VAULT ---
+# Uncomment these when you're ready to go live
+# nav:
+#   - Home: index.md
+#   - About Us: about.md
+#   - Apex Core:
+#       - Introduction: apex-core/getting-started.md
+#       - Web Flasher: apex-core/flasher.md
+#       - Compatibility: apex-core/compatibility.md
+#   - Future Products:
+#       - Crosswalk: crosswalk/index.md
+#       - Root (Plant Sensor): root/index.md
+#       - Portable IR Blaster: ir-blaster/index.md
+#       - mmWave Sensor: mmw-sensor/index.md

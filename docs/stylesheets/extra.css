@@ -1,0 +1,23 @@
+/* ── Alignment ── */
+[align="center"] {
+  text-align: center;
+}
+
+/* ── Apex Brand Colors ── */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        #297038;
+  --md-primary-fg-color--light: #34a050;
+  --md-primary-fg-color--dark:  #1e4d28;
+  --md-accent-fg-color:         #34a050;
+  --md-typeset-a-color:         #34a050;
+}
+
+/* ── Card Styling ── */
+.grid.cards > ul > li {
+  padding: 1.5rem;
+  border: 1px solid rgba(41,112,56,0.25);
+  background-color: var(--md-default-bg-color);
+  display: flex;
+  flex-direction: column;
+}
+
