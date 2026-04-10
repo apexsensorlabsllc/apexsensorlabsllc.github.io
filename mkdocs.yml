@@ -48,18 +48,3 @@ markdown_extensions:
 # ONLY the Home page is visible for now
 nav:
   - Home: index.md
-
-# --- THE VAULT ---
-# Uncomment these when you're ready to go live
-# nav:
-#   - Home: index.md
-#   - About Us: about.md
-#   - Apex Core:
-#       - Introduction: apex-core/getting-started.md
-#       - Web Flasher: apex-core/flasher.md
-#       - Compatibility: apex-core/compatibility.md
-#   - Future Products:
-#       - Crosswalk: crosswalk/index.md
-#       - Root (Plant Sensor): root/index.md
-#       - Portable IR Blaster: ir-blaster/index.md
-#       - mmWave Sensor: mmw-sensor/index.md
