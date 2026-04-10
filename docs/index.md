@@ -10,8 +10,6 @@ hide:
   <img src="assets/apex_logo_dark_transparent_black.png" width="250" alt="Apex Sensor Labs Logo" style="filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.2));">
 </p>
 
-# Apex Sensor Labs { align=center }
-
 ## Local-First. Privacy-Focused. { align=center }
 
 ---
