@@ -35,7 +35,7 @@ Most "smart" homes are just "someone else's computer" in your living room. We ar
 
 We are currently in the final stages of hardware validation and compliance preparation. 
 
-* [x] **Apex Core** - Patent Pending / Alpha Testing
+* [x] **Apex Core** - Alpha Testing
 * [ ] **Crosswalk** - Final PCB Revision
 * [ ] **Documentation Portal** - [Live & Updating](https://docs.apexsensorlabs.com)
 
