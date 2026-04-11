@@ -1,6 +1,7 @@
 site_name: Apex Sensor Labs
 # site_url: https://docs.apexsensorlabs.com/ # Reactivate when your custom domain is linked
-site_url: https://apexsensorlabsllc.github.io/
+site_url: https://docs.apexsensorlabs.com
+site_description: Official technical documentation for Apex Core, Crosswalk, and other Apex Sensor Labs LLC sensors.
 
 theme:
   name: material
