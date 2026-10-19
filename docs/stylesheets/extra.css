@@ -104,13 +104,23 @@
   height: 7rem !important;
 }
 
-/* Mobile: Stack them all vertically */
+/* Mobile: Stack them all vertically.
+   The two-column rule above is !important, so this override has to be too —
+   without it the tiles stayed side by side on phones and "Crosswalk" broke
+   mid-word. */
 @media screen and (max-width: 76.25em) {
   .large-tiles .grid.cards > ul {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
   .large-tiles .grid.cards > ul > li:last-child {
     grid-column: span 1;
+  }
+  .large-tiles .grid.cards > ul > li {
+    min-height: 150px; /* Full-width tiles don't need to be square */
+  }
+  /* Against a full-width tile, 9.5cqw would balloon the title. */
+  .large-tiles .grid.cards > ul > li strong {
+    font-size: 1.5rem;
   }
 }
 
@@ -162,6 +172,15 @@
   width: 400px;
   max-width: 100%;
   height: auto;
+}
+
+/* Keep the logo from eating the whole first screen on a phone. This needs its
+   own query rather than riding along in the tiles block above, because the
+   400px rule is declared further down the file and would win on order. */
+@media screen and (max-width: 76.25em) {
+  .apex-hero-logo {
+    width: 240px;
+  }
 }
 
 .md-typeset h1[align="center"] {

@@ -8,7 +8,7 @@ Now you need to connect your Gateway to your home Wi-Fi and set up its connectio
 
 1.  **Power On:** Plug your Gateway into any USB power outlet. You will need to unplug your device and plug it back in after installing the firmware. 
 
-2.  **Find the Hotspot:** On your phone or computer, open your Wi-Fi settings. Look for a network named `Apex-Setup`.
+2.  **Find the Hotspot:** On your phone or computer, open your Wi-Fi settings. Look for a network starting with `Apex-Setup` — each Gateway adds its own four-character suffix, so yours will look something like `Apex-Setup-ca3f`.
 
     <img src="../pictures/9-Wifi.png" alt="Phone Wi-Fi settings showing the Apex-Setup network" style="height: 400px; width: auto;">
 
