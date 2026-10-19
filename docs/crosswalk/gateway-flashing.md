@@ -54,6 +54,6 @@ Once the antenna is connected, remove the lid so you can access to device's BOOT
 
 <div class="grid cards" markdown>
 
--   [:octicons-arrow-right-24: **Next Step: Connecting & Setup (Step 2)**](./gateway-commissioning.md)
+-   [:octicons-arrow-right-24: **Next Step: Connecting & Setup (Step 2)**](./gateway-setup.md)
 
 </div>

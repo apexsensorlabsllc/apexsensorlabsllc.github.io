@@ -10,7 +10,7 @@ Before reaching out, please check the following:
 
 - **Connectivity:** Ensure your Gateway is powered on, connected to your home Wi-Fi, and within range of your sensors.
 - **Power:** For battery-powered sensors, plug the sensor into USB and check that it charges — 🟡 Yellow means charging, 🟢 Green means full.
-- **Firmware:** Ensure your device is running the latest firmware. The Gateway can [update itself from its dashboard](./crosswalk/gateway-ota.md).
+- **Firmware:** Ensure your device is running the latest firmware. The Gateway can [update itself from its dashboard](./crosswalk/gateway-updates.md).
 
 ### Quick Fixes
 

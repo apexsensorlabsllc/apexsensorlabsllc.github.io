@@ -25,7 +25,7 @@ If your dashboard says "MQTT Disconnected":
 ---
 
 ## Firmware Updates
-The Gateway updates itself from its own dashboard — see [Updating Firmware](./gateway-ota.md). If an update is interrupted and the Gateway no longer comes back online, you can always recover it by reflashing over USB from the [Flashing](./gateway-flashing.md) page.
+The Gateway updates itself from its own dashboard — see [Updating Firmware](./gateway-updates.md). If an update is interrupted and the Gateway no longer comes back online, you can always recover it by reflashing over USB from the [Flashing](./gateway-flashing.md) page.
 
 ---
 

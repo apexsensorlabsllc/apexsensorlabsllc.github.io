@@ -87,6 +87,6 @@ Now we need to add and configure rooms before adding a sensor. Go to the Rooms t
 <div class="grid cards" markdown>
 
 -   [:octicons-arrow-right-24: **Next Step: Set up your Sensors**](./index.md)
--   [:octicons-arrow-right-24: **Keeping the Gateway Updated**](./gateway-ota.md)
+-   [:octicons-arrow-right-24: **Keeping the Gateway Updated**](./gateway-updates.md)
 
 </div>

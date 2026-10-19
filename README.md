@@ -79,7 +79,7 @@ not be modified.
 A Gateway release means updating, in step: the binaries in
 `docs/crosswalk/firmware/`, the version in `gateway-manifest.json`, the version
 and notes in `firmware/gateway-ota-version.json`, and the version quoted on
-`docs/crosswalk/gateway-ota.md`.
+`docs/crosswalk/gateway-updates.md`.
 
 ---
 

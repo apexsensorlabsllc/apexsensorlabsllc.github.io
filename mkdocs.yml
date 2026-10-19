@@ -72,8 +72,8 @@ nav:
   - Crosswalk Gateway:
       - Overview: crosswalk/gateway.md
       - "Step 1: Flashing": crosswalk/gateway-flashing.md
-      - "Step 2: Connecting & Setup": crosswalk/gateway-commissioning.md
-      - Updating Firmware: crosswalk/gateway-ota.md
+      - "Step 2: Connecting & Setup": crosswalk/gateway-setup.md
+      - Updating Firmware: crosswalk/gateway-updates.md
       - Troubleshooting: crosswalk/gateway-troubleshooting.md
   - Crosswalk Sensor:
       - Overview: crosswalk/index.md
