@@ -36,8 +36,10 @@ validation:
   anchors: warn
 extra:
   social:
+    # The org, not the personal account — github.com/apexsensorlabs has no
+    # public repositories, so the footer icon used to land on an empty profile.
     - icon: fontawesome/brands/github
-      link: https://github.com/apexsensorlabs
+      link: https://github.com/apexsensorlabsllc
 markdown_extensions:
   - attr_list
   - md_in_html
