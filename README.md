@@ -13,12 +13,12 @@ python3 -m venv venv
 
 # Serve at http://localhost:8000
 ./venv/bin/mkdocs serve
-
-# Or with the Caddy HTTPS proxy on 192.168.1.198:8443 — needed to test the
-# WebSerial flashing buttons from another machine, since Web Serial requires
-# a secure context.
-./run.sh
 ```
+
+To exercise the WebSerial flashing buttons from another machine on the LAN,
+put `mkdocs serve` behind a local HTTPS reverse proxy — Web Serial only works
+in a secure context, so plain `http://` over the network will not do. That
+proxy config is kept outside this repo.
 
 Before pushing, build the way CI does:
 
@@ -52,7 +52,6 @@ pins deliberately and rebuild locally before pushing.
 | `docs/assets/` | Logos and the Open Graph share card |
 | `docs/stylesheets/extra.css` | Brand colors, landing tiles, banner |
 | `overrides/main.html` | Top banner and social metadata |
-| `Caddyfile` | Local HTTPS proxy for WebSerial testing |
 
 ### Apex Core is parked, not deleted
 

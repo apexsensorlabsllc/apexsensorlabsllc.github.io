@@ -1,6 +1,14 @@
 # MkDocs build output — the deploy workflow builds this from source.
 site/
 
+# Local-only, deliberately not published with this repo.
+# Caddyfile holds a LAN address and run.sh drives it; the other two are AI
+# assistant instructions. Keep your own copies outside version control.
+CLAUDE.md
+GEMINI.md
+Caddyfile
+run.sh
+
 # Local tooling
 venv/
 .venv/
