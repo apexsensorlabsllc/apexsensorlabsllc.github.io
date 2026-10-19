@@ -1,10 +1,13 @@
 site_name: Apex Sensor Labs
-# site_url: https://docs.apexsensorlabs.com/ # Reactivate when your custom domain is linked
-site_url: https://docs.apexsensorlabs.com
-site_description: Official technical documentation for Apex Core, Crosswalk, and other Apex Sensor Labs LLC sensors.
-
+site_url: https://docs.apexsensorlabs.com/
+site_description: Setup guides and documentation for Apex Crosswalk — local, battery-powered person counting for your smart home.
+copyright: >
+  © 2026 Apex Sensor Labs LLC. Zigbee® is a registered trademark of the Connectivity Standards Alliance.
+  ESP32® and ESP-NOW™ are trademarks of Espressif Systems. Apex Sensor Labs LLC is not affiliated with
+  either organization.
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/apex_logo_dark_transparent_black_filled.png
   favicon: assets/apex_logo_dark_transparent_black_filled.png
   palette:
@@ -15,25 +18,26 @@ theme:
     text: Inter
     code: DM Mono
   features:
-    # Minimal features for the landing page
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
     - content.code.copy
-    # - navigation.tabs      # Hidden for Coming Soon
-    # - navigation.sections  # Hidden for Coming Soon
-    # - navigation.top       # Hidden for Coming Soon
-
-# This hides the search bar so people can't "search" for hidden docs
-plugins:
-  - search:
-      enabled: false
-
+    - toc.follow
+    - search.highlight
+    - search.suggest
 extra_css:
   - stylesheets/extra.css
-
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/apexsensorlabs
-
 markdown_extensions:
   - attr_list
   - md_in_html
@@ -46,6 +50,38 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
-# ONLY the Home page is visible for now
+# ── Beta scope ────────────────────────────────────────────────────────────────
+# Apex Core is parked while we beta Crosswalk and the Crosswalk Gateway. Its
+# pages stay in the repository but are left out of the build, so they are not
+# routable and not in the search index. Delete this block to bring Core back.
+#
+# apex-core/firmware/ is deliberately NOT excluded: version.json advertises
+# https://docs.apexsensorlabs.com/apex-core/firmware/translator.bin as the OTA
+# endpoint, and removing it would break updates for any Core already in the field.
+#
+# apex-core/pictures/ IS excluded: with the Core pages out of the build nothing
+# links to them, so they were shipping ~9.6 MB of unreachable screenshots.
+exclude_docs: |
+  apex-core/*.md
+  apex-core/flasher/
+  apex-core/pictures/
+
 nav:
   - Home: index.md
+  - About Us: about.md
+  - Crosswalk Gateway:
+      - Overview: crosswalk/gateway.md
+      - "Step 1: Flashing": crosswalk/gateway-flashing.md
+      - "Step 2: Connecting & Setup": crosswalk/gateway-commissioning.md
+      - Updating Firmware: crosswalk/gateway-ota.md
+      - Troubleshooting: crosswalk/gateway-troubleshooting.md
+  - Crosswalk Sensor:
+      - Overview: crosswalk/index.md
+      - "Step 1: Flashing": crosswalk/sensor-flashing.md
+      - "Step 2: Pairing & Configuration": crosswalk/sensor-config.md
+      - "Step 3: Assembly": crosswalk/sensor-assembly.md
+      - "Step 4: Mounting": crosswalk/sensor-install.md
+      - Troubleshooting: crosswalk/sensor-troubleshooting.md
+  - FAQ: faq.md
+  - Support: support.md
+  - apexsensorlabs.com: https://apexsensorlabs.com

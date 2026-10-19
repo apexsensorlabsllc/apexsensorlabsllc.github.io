@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+<!-- Share-card and social metadata. Material only emits these when the built-in
+     social plugin is enabled, which needs Cairo/Pango on the build machine, so
+     we set them by hand against a pre-rendered card in docs/assets/. -->
+{% block extrahead %}
+  <!-- `page` is undefined while MkDocs renders theme templates such as 404.html,
+       so every lookup below has to tolerate that. -->
+  {% set page_title = (page.meta.title if page and page.meta else none)
+                      or (page.title if page else none)
+                      or config.site_name %}
+  {% set page_desc = (page.meta.description if page and page.meta else none)
+                     or config.site_description %}
+  {% set page_url = (page.canonical_url if page else none) or config.site_url %}
+  {% set card = config.site_url ~ 'assets/apex-social-card.png' %}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ config.site_name }}">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_desc }}">
+  <meta property="og:image" content="{{ card }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="{{ page_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page_title }}">
+  <meta name="twitter:description" content="{{ page_desc }}">
+  <meta name="twitter:image" content="{{ card }}">
+{% endblock %}
+
+<!-- Thin banner across the top of every page, pointing back at the main site.
+     Styling lives in docs/stylesheets/extra.css under "Main-site banner". -->
+{% block announce %}
+  <a href="https://apexsensorlabs.com" class="apex-announce">
+    Apex Sensor Labs &mdash; visit the main site<span class="apex-announce-arrow">&rarr;</span>
+  </a>
+{% endblock %}

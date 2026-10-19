@@ -1,0 +1,10 @@
+# MkDocs build output — the deploy workflow builds this from source.
+site/
+
+# Local tooling
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+.DS_Store
