@@ -25,6 +25,10 @@ The Crosswalk sensor uses dual sensing zones to detect direction. Because you ca
 
 1.  **Clean the Surface:** Wipe the door frame with a dry cloth to ensure a good bond.
 2.  **Placement:** Remove the backing from the adhesive strips and press the sensor firmly against the frame.
+3.  **Power (Hardwired only):** Run a USB-C cable from the sensor to a USB power adapter in a nearby outlet. The sensor needs power at all times, so choose an outlet that isn't switched off with the lights.
+
+    !!! info "Plan your cable route"
+        Before you stick the sensor down, make sure your USB-C cable is long enough to reach the outlet. Route it so it stays clear of the door when it opens and closes.
 
 ---
 

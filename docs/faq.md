@@ -42,12 +42,12 @@ Absolutely. You can pair multiple Crosswalk sensors to a single Gateway and orga
 
 <details>
 <summary>How long does the battery last?</summary>
-Depending on how busy the door is, a single charge should last **3 to 6 months**. Battery level is reported to the Gateway, so you check it on the `apex.local` dashboard or in your smart home app rather than on the sensor itself.
+Depending on how busy the door is, a single charge should last **3 to 6 months**. Battery level is reported to the Gateway, so you check it on the `apex.local` dashboard or in your smart home app rather than on the sensor itself. The Hardwired version has no battery and runs from USB-C power, so it never needs charging.
 </details>
 
 <details>
 <summary>How do I know the sensor is on? It has no lights.</summary>
-That's by design. Once a Crosswalk sensor is running on battery it keeps every light off to conserve power, so there is no light to indicate that it is awake and working. Confirm it is reporting on the `apex.local` dashboard instead. When you plug the sensor into USB, 🟡 Yellow means it is charging and 🟢 Green means it is fully charged.
+That's by design. Once a Crosswalk sensor is running on battery it keeps every light off to conserve power, so there is no light to indicate that it is awake and working. Confirm it is reporting on the `apex.local` dashboard instead. When you plug the sensor into USB, 🟡 Yellow means it is charging and 🟢 Green means it is fully charged. The Hardwired version is different: its 🔴 Red power light and 🟢 Green light stay on whenever it has power.
 </details>
 
 <details>

@@ -1,6 +1,6 @@
 # Step 2: Pairing & Configuration
 
-Before you assemble and mount the sensor, you need to link it to your Gateway. It's much easier to pair your Crosswalk sensor while the board is still open and you can reach the battery connector.
+Before you assemble and mount the sensor, you need to link it to your Gateway. It's much easier to pair your Crosswalk sensor while the board is still open and you can reach its power connection.
 
 ---
 
@@ -17,11 +17,23 @@ To add a new sensor, you must first put the Gateway into "Pairing Mode."
 
 3.  **The Countdown:** A 60-second countdown will appear on your screen that allows a Crosswalk Sensor to start pairing.
 
-4.  **Activate the Sensor:** While the timer is counting down, plug the battery for your Crosswalk sensor into the JST connector. The sensor will automatically boot up and initiate the pairing sequence with the Crosswalk Gateway.
-    - **Note:** The sensor will scan for the Gateway automatically.
+4.  **Activate the Sensor:** While the timer is counting down, power on your Crosswalk sensor. It will automatically boot up and initiate the pairing sequence with the Crosswalk Gateway.
 
-    !!! info "Watch the dashboard, not the sensor"
-        Once it's running on battery, the sensor keeps all of its lights off to save power — so there is no light to tell you it is awake and working. The Gateway dashboard is where you confirm pairing.
+    === "Battery-Powered"
+
+        Plug the battery into the JST connector.
+
+        !!! info "Watch the dashboard, not the sensor"
+            Once it's running on battery, the sensor keeps all of its lights off to save power — so there is no light to tell you it is awake and working. The Gateway dashboard is where you confirm pairing.
+
+    === "Hardwired"
+
+        Plug a USB-C cable into the sensor and into a USB power adapter.
+
+        !!! info "Watch the dashboard, not the sensor"
+            The red power light and the green light come on as soon as the sensor has power. They only mean the board is powered, not that it has paired. The Gateway dashboard is where you confirm pairing.
+
+    - **Note:** The sensor will scan for the Gateway automatically.
 
 5.  **Success:** When successful, the dashboard will display "Sensor Paired Successfully" and the new device will appear in your list.
 

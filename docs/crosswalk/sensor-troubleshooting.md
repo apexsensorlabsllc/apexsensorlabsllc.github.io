@@ -4,17 +4,31 @@ Ensure your occupancy counts are accurate and your sensors are communicating rel
 
 ## Understanding the Sensor Lights
 
-The Crosswalk sensor's lights are about **charging**, not status. Once it is running on battery, the sensor keeps every light off so that nothing drains the battery.
+The Crosswalk sensor's lights are about **power**, not status. They never tell you whether the sensor is paired or counting — use your `apex.local` dashboard or your smart home app for that.
 
-| LED Color | When | What it Means |
-| :--- | :--- | :--- |
-| 🟡 **Yellow** | Plugged into USB | Battery is charging. |
-| 🟢 **Green** | Plugged into USB | Battery is fully charged. |
-| 🔴 **Red** | When you first plug in USB | Separate power light — the board has power. It switches off once the sensor enters deep sleep. |
-| ⚫ **No Lights** | Running on battery | Normal. All lights stay off to save battery. |
+=== "Battery-Powered"
 
-!!! info "No lights is normal"
-    On battery power there is **no light to tell you the sensor is on or working** — this is intentional, and it is how the sensor lasts months on a charge. The only place to check whether a sensor is awake, paired, and counting is your `apex.local` dashboard or your smart home app.
+    Once it is running on battery, the sensor keeps every light off so that nothing drains the battery.
+
+    | LED Color | When | What it Means |
+    | :--- | :--- | :--- |
+    | 🟡 **Yellow** | Plugged into USB | Battery is charging. |
+    | 🟢 **Green** | Plugged into USB | Battery is fully charged. |
+    | 🔴 **Red** | When you first plug in USB | Separate power light — the board has power. It switches off once the sensor enters deep sleep. |
+    | ⚫ **No Lights** | Running on battery | Normal. All lights stay off to save battery. |
+
+    !!! info "No lights is normal"
+        On battery power there is **no light to tell you the sensor is on or working** — this is intentional, and it is how the sensor lasts months on a charge. The only place to check whether a sensor is awake, paired, and counting is your `apex.local` dashboard or your smart home app.
+
+=== "Hardwired"
+
+    The Hardwired sensor never sleeps, so its lights stay on whenever it has power.
+
+    | LED Color | When | What it Means |
+    | :--- | :--- | :--- |
+    | 🔴 **Red** | Always, while powered | The board has power. |
+    | 🟢 **Green** | Always, while powered | Normal. This is the charging light, and it shows green even though there is no battery. |
+    | ⚫ **No Lights** | Any time | The sensor has no power. Check the USB-C cable and power adapter. |
 
 ---
 
@@ -34,7 +48,7 @@ If the room count increases when you leave and decreases when you enter:
 
 ## Sensor Won't Pair
 1.  **Gateway Mode:** Ensure the Gateway is in **Pairing Mode** (60-second timer active) before you power the sensor on.
-2.  **Power Cycle:** Unplug the battery from the JST connector and plug it back in while the Gateway is searching. Remember that the sensor shows no light while doing this — watch the dashboard for confirmation instead.
+2.  **Power Cycle:** While the Gateway is searching, unplug the sensor's power and plug it back in — the battery's JST connector on the Battery-Powered version, or the USB-C cable on the Hardwired version. The sensor's lights don't show pairing, so watch the dashboard for confirmation instead.
 3.  **Proximity:** Bring the sensor into the same room as the Gateway just for the initial pairing.
 
 ---
@@ -48,6 +62,8 @@ If your sensor's battery dies or you lose power to your house, don't worry!
 ---
 
 ## Battery Draining Quickly
+
+This section applies to the Battery-Powered version only.
 
 Charge the sensor by plugging it into USB and waiting for the light to turn from 🟡 Yellow to 🟢 Green.
 

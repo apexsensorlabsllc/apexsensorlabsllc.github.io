@@ -9,14 +9,14 @@ If you're having issues with your Apex hardware, we're here to help. Because our
 Before reaching out, please check the following:
 
 - **Connectivity:** Ensure your Gateway is powered on, connected to your home Wi-Fi, and within range of your sensors.
-- **Power:** For battery-powered sensors, plug the sensor into USB and check that it charges — 🟡 Yellow means charging, 🟢 Green means full.
+- **Power:** For battery-powered sensors, plug the sensor into USB and check that it charges — 🟡 Yellow means charging, 🟢 Green means full. For hardwired sensors, check that the 🔴 Red and 🟢 Green lights are on; if they're off, check the USB-C cable and power adapter.
 - **Firmware:** Ensure your device is running the latest firmware. The Gateway can [update itself from its dashboard](./crosswalk/gateway-updates.md).
 
 ### Quick Fixes
 
 - **Gateway Issues:** For Wi-Fi, dashboard, or MQTT problems, see the [Crosswalk Gateway Troubleshooting Guide](./crosswalk/gateway-troubleshooting.md).
 - **Sensor Issues:** For count inaccuracies, pairing failures, or orientation help, refer to the [Crosswalk Sensor Troubleshooting Guide](./crosswalk/sensor-troubleshooting.md).
-- **Checking Sensor Status:** Crosswalk sensors keep their lights off while running on battery, so the [sensor light reference](./crosswalk/sensor-troubleshooting.md#understanding-the-sensor-lights) explains what you can and cannot tell from the hardware itself.
+- **Checking Sensor Status:** Crosswalk sensor lights only show power, not pairing or counting, so the [sensor light reference](./crosswalk/sensor-troubleshooting.md#understanding-the-sensor-lights) explains what you can and cannot tell from the hardware itself.
 
 !!! tip "Common Suggestions"
     - **Reboot:** Sometimes a simple power cycle (unplug and replug) is all that's needed to bring the Gateway back onto the network.

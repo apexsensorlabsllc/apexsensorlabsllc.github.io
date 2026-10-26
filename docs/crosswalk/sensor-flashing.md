@@ -19,14 +19,28 @@ The Crosswalk Sensor is the part that goes on your door. You need to flash it be
 
 1.  **Connect:** Plug your Crosswalk Sensor into your computer.
 
-2.  **Flash:** Click the **Install** button below.
+2.  **Flash:** Choose the tab that matches your sensor, then click its **Install** button.
 
-    <div align="center">
-        <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
-        <esp-web-install-button manifest="../sensor-manifest.json">
-            <button slot="install" class="md-button md-button--primary">Install Crosswalk Sensor</button>
-        </esp-web-install-button>
-    </div>
+    <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+
+    === "Battery-Powered"
+
+        <div align="center">
+            <esp-web-install-button manifest="../sensor-manifest.json">
+                <button slot="install" class="md-button md-button--primary">Install Crosswalk Sensor</button>
+            </esp-web-install-button>
+        </div>
+
+    === "Hardwired"
+
+        <div align="center">
+            <esp-web-install-button manifest="../cw-hw-manifest.json">
+                <button slot="install" class="md-button md-button--primary">Install Crosswalk Sensor (Hardwired)</button>
+            </esp-web-install-button>
+        </div>
+
+    !!! warning "Pick the Right Version"
+        Both versions use the same chip, so the installer can't tell them apart. Installing the wrong one won't damage anything, but your sensor won't work correctly until you install the version that matches your hardware.
 
 3.  **Wait:** Do not unplug the sensor until the screen says "Installation Complete". 
 

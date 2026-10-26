@@ -29,4 +29,4 @@ Apex Crosswalk counts people as they enter and leave, so your lights, heating, a
 </div>
 
 ---
-<p align="center">Local-First. Privacy-Focused. Battery-Powered.</p>
+<p align="center">Privacy Focused. Energy Savings. No Subscriptions.</p>
