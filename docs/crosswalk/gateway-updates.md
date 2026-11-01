@@ -3,7 +3,7 @@
 Your Crosswalk Gateway updates itself over your home network. You do not need to plug it back into a computer or use the install button again.
 
 !!! info "Current Version"
-    The latest Gateway firmware is **1.2.2**. Your Gateway shows the version it is currently running on the dashboard.
+    The latest Gateway firmware is **1.2.10**. Your Gateway shows the version it is currently running on the dashboard.
 
 ---
 
