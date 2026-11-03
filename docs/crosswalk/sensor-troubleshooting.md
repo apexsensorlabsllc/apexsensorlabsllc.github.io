@@ -32,6 +32,15 @@ The Crosswalk sensor's lights are about **power**, not status. They never tell y
 
 ---
 
+## Installer Can't Find the Sensor
+If you click **Install** and your sensor doesn't appear in the list, or the install fails right away:
+
+1.  **Use the BOOT Button:** Unplug the sensor. Push a paperclip into the BOOT slot on top of the case and hold it down, then plug the USB-C cable back in. Let go once it's plugged in, then click **Install** again. See [Flashing](./sensor-flashing.md) for a photo of the slot.
+2.  **Check the Browser:** Flashing only works in **Google Chrome** or **Microsoft Edge** on a computer.
+3.  **Check the Cable:** Some USB-C cables only carry power, not data. If the sensor still doesn't appear, try a different cable.
+
+---
+
 ## Count is Backwards or Wrong
 If the room count increases when you leave and decreases when you enter:
 

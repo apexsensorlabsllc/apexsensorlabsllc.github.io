@@ -14,10 +14,17 @@ The Crosswalk Sensor is the part that goes on your door. You need to flash it be
 - **Crosswalk Sensor**
 - **USB-C Cable**
 - **Computer** with Chrome or Edge installed.
+- **Paperclip** (a standard one works)
+
+## Finding the BOOT Button
+
+You don't need to open the case to flash the sensor. The BOOT button sits under a small slot on the top of the case, circled below. You'll press it with the end of a paperclip. This is the same on both the Battery-Powered and Hardwired versions.
+
+![Assembled Crosswalk Sensor with the BOOT slot on top of the case circled in red](./pictures/CW_Boot.jpeg)
 
 ## Flashing Procedure
 
-1.  **Connect:** Plug your Crosswalk Sensor into your computer.
+1.  **Connect:** Push a paperclip into the BOOT slot and hold the button down. With the button held down, plug the USB-C cable into the sensor and your computer. Let go of the button once it's plugged in.
 
 2.  **Flash:** Choose the tab that matches your sensor, then click its **Install** button.
 
