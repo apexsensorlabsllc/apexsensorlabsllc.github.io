@@ -83,6 +83,5 @@ nav:
       - "Step 3: Assembly": crosswalk/sensor-assembly.md
       - "Step 4: Mounting": crosswalk/sensor-install.md
       - Troubleshooting: crosswalk/sensor-troubleshooting.md
-  - FAQ: faq.md
   - Support: support.md
   - apexsensorlabs.com: https://apexsensorlabs.com
