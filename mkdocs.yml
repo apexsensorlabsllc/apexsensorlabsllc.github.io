@@ -70,7 +70,6 @@ exclude_docs: |
 
 nav:
   - Home: index.md
-  - About Us: about.md
   - Crosswalk Gateway:
       - Overview: crosswalk/gateway.md
       - "Step 1: Flashing": crosswalk/gateway-flashing.md
