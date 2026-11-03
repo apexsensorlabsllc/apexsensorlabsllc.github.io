@@ -1,0 +1,15 @@
+{
+  "name": "Apex Crosswalk",
+  "version": "1.0.0",
+  "builds": [
+    {
+      "chipFamily": "ESP32-C6",
+      "parts": [
+        { "path": "firmware/crosswalk-bootloader.bin", "offset": 0 },
+        { "path": "firmware/crosswalk-partitions.bin", "offset": 32768 },
+        { "path": "firmware/crosswalk-boot_app0.bin", "offset": 57344 },
+        { "path": "firmware/crosswalk.bin", "offset": 65536 }
+      ]
+    }
+  ]
+}

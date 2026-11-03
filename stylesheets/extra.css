@@ -1,0 +1,226 @@
+/* ── Alignment ── */
+[align="center"] {
+  text-align: center;
+}
+
+/* ── Apex Brand Colors ── */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        #297038;
+  --md-primary-fg-color--light: #34a050;
+  --md-primary-fg-color--dark:  #1e4d28;
+  --md-accent-fg-color:         #34a050;
+  --md-typeset-a-color:         #34a050;
+}
+
+/* ── Sidebar Sizing ── */
+/* Material default is 0.7rem; bump nav + TOC text slightly */
+.md-nav {
+  font-size: 0.78rem;
+}
+
+/* Widen the sidebars a touch so larger text doesn't wrap */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar {
+    width: 13.5rem;
+  }
+}
+
+/* ── Card Styling ── */
+.grid.cards > ul > li {
+  padding: 1.5rem;
+  border: 1px solid rgba(41,112,56,0.25);
+  background-color: var(--md-default-bg-color);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Large Tiles (Landing Page) ── */
+.large-tiles .grid.cards > ul {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 1.5rem !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+}
+
+/* Apex Core is parked during the Crosswalk beta, so it sits last and spans
+   both columns. If the tile order changes, update these :last-child rules. */
+.large-tiles .grid.cards > ul > li:last-child {
+  grid-column: span 2;
+  width: 100%;
+}
+
+.large-tiles .grid.cards > ul > li {
+  min-height: 280px; /* Slightly taller squares */
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  border: 2px solid rgba(41,112,56,0.3) !important;
+  background-color: var(--md-default-bg-color);
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+  border-radius: 0.4rem;
+  overflow: hidden; /* Ensures the clickable area doesn't bleed out */
+  container-type: inline-size; /* Lets the title size itself against the tile width */
+}
+
+/* The renderer adds a <p> tag inside the <li>, let's neutralize it */
+.large-tiles .grid.cards > ul > li p {
+  display: contents !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.large-tiles .grid.cards > ul > li:hover {
+  transform: translateY(-5px);
+  border-color: var(--md-primary-fg-color) !important;
+  background-color: rgba(41,112,56,0.05); /* Subtle highlight on hover */
+}
+
+/* THE MAGIC: Make the link fill every pixel of the li */
+.large-tiles .grid.cards > ul > li a {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 2rem !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  text-align: center !important;
+}
+
+.large-tiles .grid.cards > ul > li strong {
+  /* Scale with the tile itself so "Crosswalk" never breaks mid-word,
+     but stays at full size whenever the tile is wide enough */
+  font-size: clamp(1.2rem, 9.5cqw, 2.2rem);
+  margin-top: 0;
+  display: block;
+}
+
+.large-tiles .grid.cards > ul > li .twemoji {
+  width: 7rem !important; /* Larger icons */
+  height: 7rem !important;
+}
+
+/* Mobile: Stack them all vertically.
+   The two-column rule above is !important, so this override has to be too —
+   without it the tiles stayed side by side on phones and "Crosswalk" broke
+   mid-word. */
+@media screen and (max-width: 76.25em) {
+  .large-tiles .grid.cards > ul {
+    grid-template-columns: 1fr !important;
+  }
+  .large-tiles .grid.cards > ul > li:last-child {
+    grid-column: span 1;
+  }
+  .large-tiles .grid.cards > ul > li {
+    min-height: 150px; /* Full-width tiles don't need to be square */
+  }
+  /* Against a full-width tile, 9.5cqw would balloon the title. */
+  .large-tiles .grid.cards > ul > li strong {
+    font-size: 1.5rem;
+  }
+}
+
+/* ── Parked Tile (Apex Core) ── */
+/* Rendered as a <span>, not an <a>, so it cannot be navigated to at all.
+   These rules mirror the live tiles' geometry so the grid stays even. */
+.large-tiles .grid.cards > ul > li .tile-static {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.75rem;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 2rem !important;
+  text-align: center !important;
+  color: inherit;
+  cursor: not-allowed;
+}
+
+.large-tiles .grid.cards > ul > li:last-child {
+  opacity: 0.5;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Cancel the hover lift the live tiles use */
+.large-tiles .grid.cards > ul > li:last-child:hover {
+  transform: none;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  background-color: var(--md-default-bg-color);
+}
+
+.large-tiles .grid.cards > ul > li .tile-badge {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--md-primary-fg-color--light);
+  background: rgba(41, 112, 56, 0.18);
+  border: 1px solid rgba(41, 112, 56, 0.35);
+  border-radius: 12px;
+  padding: 2px 10px;
+}
+
+/* ── Landing Hero ── */
+/* The logo carries the brand name, so the H1 underneath is the positioning
+   line. Keep it close to the logo and scale it down on narrow screens. */
+.apex-hero-logo {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Keep the logo from eating the whole first screen on a phone. This needs its
+   own query rather than riding along in the tiles block above, because the
+   400px rule is declared further down the file and would win on order. */
+@media screen and (max-width: 76.25em) {
+  .apex-hero-logo {
+    width: 240px;
+  }
+}
+
+.md-typeset h1[align="center"] {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+  margin: 0 0 0.8rem;
+}
+
+/* ── Landing Lede ── */
+.apex-lede {
+  max-width: 44rem;
+  margin: 0 auto 2.5rem;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.7;
+}
+
+/* ── Main-site banner ── */
+.md-banner {
+  background-color: rgba(41, 112, 56, 0.12);
+  border-bottom: 1px solid rgba(41, 112, 56, 0.35);
+}
+
+.md-banner__inner {
+  margin: 0.4rem auto;
+  font-size: 0.72rem;
+  text-align: center;
+}
+
+.apex-announce {
+  color: var(--md-primary-fg-color--light) !important;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.apex-announce:hover {
+  color: var(--md-accent-fg-color) !important;
+}
+
+.apex-announce-arrow {
+  margin-left: 0.3rem;
+}
+
