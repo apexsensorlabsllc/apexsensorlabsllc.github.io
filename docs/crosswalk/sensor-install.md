@@ -21,8 +21,6 @@ The Crosswalk sensor uses dual sensing zones to tell which way someone is walkin
 
 2.  **Direction:** Stand in the doorway, facing **into the room you want to count people entering**. Look up at where the sensor will go. The sensor's **USB-C port should be on your left**.
 
-    ![[Placeholder: View from the doorway looking into the room, sensor on the frame above with the USB-C port on the left]]
-
     !!! info "Which room do I face?"
         - **Single Room:** Face the room the sensor is counting.
         - **Dual Room:** Face the room you'll set as the **Side A room** on the dashboard.

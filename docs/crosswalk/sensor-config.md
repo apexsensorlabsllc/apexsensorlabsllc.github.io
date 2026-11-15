@@ -27,7 +27,7 @@ To add a new sensor, you must first put the Gateway into "Pairing Mode."
         2.  Plug the battery's small white connector into the matching socket on the board.
         3.  Slide the back cover closed again.
 
-        ![[Placeholder: Back cover slid partway open, showing the battery plug connected to the board]]
+        ![Back cover slid partway open, showing the battery and its plug next to the board](./pictures/CW_Slide_Top.jpeg)
 
         !!! info "Watch the dashboard, not the sensor"
             Once it's running on battery, the sensor keeps all of its lights off to save power — so there is no light to tell you it is awake and working. The Gateway dashboard is where you confirm pairing.
