@@ -77,6 +77,7 @@ nav:
       - "Step 3: Connecting & Setup": crosswalk/gateway-setup.md
       - Updating Firmware: crosswalk/gateway-updates.md
       - Troubleshooting: crosswalk/gateway-troubleshooting.md
+      - MQTT Reference: crosswalk/gateway-mqtt.md
   - "2. Crosswalk Sensor":
       - Overview: crosswalk/index.md
       - "Step 1: Flashing": crosswalk/sensor-flashing.md

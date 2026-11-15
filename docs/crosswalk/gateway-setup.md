@@ -80,6 +80,9 @@ Your Apex Crosswalk Gateway is now connected and set up. It uses the Home Assist
 
 Your Apex Gateway lists information for you here to include 'Total Occupancy'. This is an aggregation of all room counts between all of your Crosswalk Sensors. If two people are in your 'Office' and one person is in the 'Living Room' this count would be 3. This also lists and links to all of your Crosswalk sensor devices. You can easily click 'Reset All Rooms' to revert the room counts to 0 across your entire setup.
 
+!!! tip "Not using Home Assistant?"
+    Systems like Node-RED, openHAB, or Hubitat can read your counts straight from MQTT. See the [MQTT Reference](./gateway-mqtt.md) for every topic the Gateway uses.
+
 ---
 
 ## 5. Add Rooms

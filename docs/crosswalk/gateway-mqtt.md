@@ -1,0 +1,157 @@
+# MQTT Reference
+
+This page lists every MQTT topic the Crosswalk Gateway uses. It's for people who want to use their room counts outside Home Assistant, for example in Node-RED, openHAB, Hubitat, or their own scripts.
+
+!!! info "Using Home Assistant? You don't need this page"
+    Home Assistant finds your Gateway, rooms, and sensors automatically. Everything on this page is already set up for you.
+
+!!! warning "Requires an MQTT broker"
+    The Gateway sends its data **to** an MQTT broker. It doesn't include one. You'll need a broker running on your network, such as the **Mosquitto broker** add-on in Home Assistant, or Mosquitto on another computer. Connect the Gateway to it in [Step 3: Connecting & Setup](./gateway-setup.md#3-smart-home-connection-mqtt).
+
+    If the MQTT settings are left blank, the Gateway runs on its own and nothing on this page is available. You can still use the `apex.local` dashboard.
+
+!!! info "Firmware version"
+    Items marked **1.2.12+** need Gateway firmware 1.2.12 or later. Everything else works on all current firmware. See [Updating Firmware](./gateway-updates.md) to check your version.
+
+---
+
+## How Topics Are Named
+
+Every topic starts with `apex/`. Rooms and sensors each have their own ID in the topic:
+
+| ID | What it is | Example |
+| :--- | :--- | :--- |
+| `<room>` | The room's name when you first added it, in lowercase with spaces and symbols turned into hyphens. If two rooms would get the same ID, the second gets `-2` added. | "Living Room" → `living-room` |
+| `<sensor>` | The sensor's **MAC**, shown on its card in the dashboard's **Sensors** tab. Always 12 lowercase characters. | `14c19fe1e574` |
+
+!!! tip "Renaming a room keeps its ID"
+    Renaming a room only changes the name you see. Its topic stays the same, so your automations keep working. Deleting a room and adding it again creates a new ID.
+
+!!! warning "One Gateway per broker"
+    Topics don't include the Gateway's name, so two Gateways connected to the same broker would overwrite each other's data.
+
+---
+
+## Gateway Status
+
+| Topic | Payload |
+| :--- | :--- |
+| `apex/status` | `online` while the Gateway is connected, `offline` if it drops off. The broker sends `offline` for the Gateway if it loses power or Wi-Fi. |
+
+---
+
+## Room Topics
+
+Published for every room, whenever its count changes.
+
+| Topic | Payload |
+| :--- | :--- |
+| `apex/room/<room>/count` | Number of people in the room, e.g. `2`. Never goes below `0`. |
+| `apex/room/<room>/occupied` | `ON` when the count is above 0, otherwise `OFF`. |
+| `apex/room/<room>/last_changed` | When the count last changed. See [Timestamps](#timestamps). |
+
+---
+
+## Sensor Topics
+
+Published for every paired sensor.
+
+| Topic | Payload |
+| :--- | :--- |
+| `apex/sensor/<sensor>/battery` | Battery level in percent, e.g. `87`. Battery-Powered sensors only. |
+| `apex/sensor/<sensor>/voltage_mv` | Battery voltage in millivolts, e.g. `3912`. Battery-Powered sensors only. |
+| `apex/sensor/<sensor>/rssi` | Signal strength in dBm, e.g. `-62`. Closer to 0 is stronger. |
+| `apex/sensor/<sensor>/last_seen` | When the Gateway last heard from the sensor. See [Timestamps](#timestamps). |
+| `apex/sensor/<sensor>/invert` | `ON` if the counting direction is inverted, otherwise `OFF`. |
+| `apex/sensor/<sensor>/door_left` | Left door state as reported by the sensor: `ON` = open, `OFF` = closed. |
+| `apex/sensor/<sensor>/door_right` | Right door state as reported by the sensor: `ON` = open, `OFF` = closed. |
+| `apex/sensor/<sensor>/fw_version` | The sensor's firmware version, e.g. `0x03`. |
+
+---
+
+## System Topics
+
+| Topic | Payload |
+| :--- | :--- |
+| `apex/system/total_occupancy` | Total people across all rooms, e.g. `3`. |
+| `apex/system/sensor_count` | Number of sensors currently online. |
+| `apex/system/pairing` | `ON` while the Gateway is accepting new sensors, otherwise `OFF`. **1.2.12+** |
+
+---
+
+## Commands
+
+Publish to these topics to control the Gateway.
+
+| Topic | Payload | What it does |
+| :--- | :--- | :--- |
+| `apex/room/<room>/reset/cmd` | Anything | Sets the room's count to 0. |
+| `apex/room/<room>/adjust/up/cmd` | Anything | Adds 1 to the room's count. |
+| `apex/room/<room>/adjust/down/cmd` | Anything | Subtracts 1 from the room's count (it won't go below 0). |
+| `apex/sensor/<sensor>/invert/cmd` | `ON` or `OFF` | Inverts the sensor's counting direction, or sets it back. |
+| `apex/sensor/<sensor>/repair/cmd` | Anything | Tells the sensor to pair again, the same as **Force Re-pair** on the dashboard. |
+| `apex/system/reset_all/cmd` | Anything | Sets every room's count to 0. |
+| `apex/system/pairing/cmd` | `ON` or `OFF` | Opens or closes pairing. Pairing closes on its own after 30 minutes, or if the Gateway restarts. **1.2.12+** |
+| `apex/system/time/cmd` | Unix time in seconds, e.g. `1763200000` | Sets the Gateway's clock. Only needed if the Gateway can't get the time from the internet. **1.2.12+** |
+
+!!! danger "Don't send commands with the retain flag"
+    The Gateway's own data is retained by the broker so new apps get current values straight away. Commands must **not** be retained. A retained command is sent to the Gateway again every time it reconnects, so a retained `reset/cmd` would zero that room after every restart.
+
+---
+
+## Timestamps
+
+`last_changed` and `last_seen` are sent as Unix time in seconds, e.g. `1763200000`.
+
+- **1.2.12+:** the Gateway gets the time from the internet when it starts. Until it has the time, these topics send `0`, which means "unknown". If your network has no internet access, set the clock with `apex/system/time/cmd`.
+- **Earlier firmware:** the Gateway has no real clock, so these values aren't reliable. Use the time your broker receives the message instead.
+
+---
+
+## Examples
+
+These use the `mosquitto_sub` and `mosquitto_pub` command-line tools. Replace `192.168.1.10` with your broker's address, and add `-u <username> -P <password>` if your broker needs a login.
+
+**Watch everything the Gateway sends:**
+
+```sh
+mosquitto_sub -h 192.168.1.10 -t 'apex/#' -v
+```
+
+**Watch one room's count:**
+
+```sh
+mosquitto_sub -h 192.168.1.10 -t 'apex/room/living-room/count'
+```
+
+**Reset a room to 0:**
+
+```sh
+mosquitto_pub -h 192.168.1.10 -t 'apex/room/living-room/reset/cmd' -m 'reset'
+```
+
+**Invert a sensor's direction:**
+
+```sh
+mosquitto_pub -h 192.168.1.10 -t 'apex/sensor/14c19fe1e574/invert/cmd' -m 'ON'
+```
+
+In Node-RED, an **mqtt in** node subscribed to `apex/room/+/count` gives you every room's count, with the room ID in `msg.topic`.
+
+---
+
+## Home Assistant Discovery
+
+The Gateway also publishes the setup messages Home Assistant uses to find it, under the `homeassistant/` prefix. If your system uses a different prefix, change **Discovery prefix** in the MQTT section of the dashboard's **Settings** tab. Other systems can ignore these messages.
+
+??? info "Diagnostic topics"
+    Each sensor also reports battery-life statistics under `apex/sensor/<sensor>/`: `wakes`, `awake_ms`, `queue_len`, `cum_wakes`, `cum_events`, `cum_awake_ms`, and `cold_boots`. They're used by Apex support to investigate battery drain, and they may change between firmware versions, so don't build automations on them.
+
+---
+
+<div class="grid cards" markdown>
+
+-   [:octicons-arrow-right-24: **Gateway Troubleshooting**](./gateway-troubleshooting.md)
+-   [**Back to Home Page**](../index.md)
+
+</div>
