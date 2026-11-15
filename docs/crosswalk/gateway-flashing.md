@@ -1,12 +1,6 @@
-# Step 1: Flashing Your Gateway
+# Step 2: Flashing Your Gateway
 
-The Crosswalk Gateway is the "hub" for your Apex Crosswalk sensors. First, you need to connect the antenna. You may need to remove the case lid in order to best secure the antenna.
-
-![Crosswalk Gateway with the 2.4GHz antenna screwed onto the SMA adapter](./pictures/ApexCWGateway.jpeg)
-
-Once the antenna is connected, remove the lid so you can access to device's BOOT button, circled below. If you have a paperclip or other device, you can access the BOOT button that way through the lid as well.
-
-![Gateway with the case lid removed, the BOOT button circled in red](./pictures/2-NoLid.jpg)
+The Crosswalk Gateway is the "hub" for your Apex Crosswalk sensors. Before it joins your home, you'll install the latest firmware on it.
 
 !!! tip "Why we Flash First"
     To ensure you have the absolute latest features and the most secure, privacy-focused version of our local software, we start every setup by quickly updating the device's firmware. This ensures your hardware is running the best possible version of the Crosswalk Gateway before it joins your home.
@@ -21,9 +15,15 @@ Once the antenna is connected, remove the lid so you can access to device's BOOT
 - **USB-C Cable**
 - **Computer** with Chrome or Edge installed.
 
+## Finding the BOOT Button
+
+To flash the Gateway, you need to hold down its BOOT button while you plug it in. The button is inside the case, so **take the lid off the case** first. There are two small buttons on the board. The BOOT button is the one **closest to the USB-C port**, circled below.
+
+![Gateway with the case lid removed, the BOOT button closest to the USB-C port circled in red](./pictures/2-NoLid_BOOT.jpeg)
+
 ## Flashing Procedure
 
-1.  **Connect:** Hold the BOOT button of your device, circled in red above. With the button held down, plug the Gateway into your computer's USB port. Let go of the boot button once it's plugged in.
+1.  **Connect:** Hold down the BOOT button, circled in red above. With the button held down, plug the Gateway into your computer's USB port. Let go of the boot button once it's plugged in.
 
 2.  **Start Flash:** Click the **Install** button below.
 
@@ -48,12 +48,12 @@ Once the antenna is connected, remove the lid so you can access to device's BOOT
 
 6.  **Wait:** Do not unplug the device until the screen says "Installation Complete". 
 
-7.  **Finish:** Your Gateway is now ready to connect to your home network.
+7.  **Finish:** Unplug the Gateway and put the lid back on the case. Your Gateway is now ready to connect to your home network.
 
 ---
 
 <div class="grid cards" markdown>
 
--   [:octicons-arrow-right-24: **Next Step: Connecting & Setup (Step 2)**](./gateway-setup.md)
+-   [:octicons-arrow-right-24: **Next Step: Connecting & Setup (Step 3)**](./gateway-setup.md)
 
 </div>

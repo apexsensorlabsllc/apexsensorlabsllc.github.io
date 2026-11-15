@@ -38,7 +38,7 @@ Serial.
 ## Where to start
 
 - **[Crosswalk Gateway setup](https://docs.apexsensorlabs.com/crosswalk/gateway/)** — do this first; sensors have nothing to talk to until the Gateway is online.
-- **[Crosswalk Sensor setup](https://docs.apexsensorlabs.com/crosswalk/)** — flash, pair, assemble, mount.
+- **[Crosswalk Sensor setup](https://docs.apexsensorlabs.com/crosswalk/)** — flash, pair, mount.
 - **[FAQ](https://docs.apexsensorlabs.com/faq/)** and **[Support](https://docs.apexsensorlabs.com/support/)**
 
 Crosswalk is in beta. There is no cloud portal to log into, which also means

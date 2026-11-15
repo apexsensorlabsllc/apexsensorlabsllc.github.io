@@ -165,6 +165,24 @@
   padding: 2px 10px;
 }
 
+/* ── Setup Order (Gateway → Sensor) ── */
+/* Customers started with the sensor and couldn't pair it, so the live tiles
+   carry their step number above the title and a short cue underneath. */
+.large-tiles .grid.cards > ul > li .tile-step {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--md-primary-fg-color--light);
+  margin-bottom: 0.5rem;
+}
+
+.large-tiles .grid.cards > ul > li .tile-sub {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 0.5rem;
+}
+
 /* ── Landing Hero ── */
 /* The logo carries the brand name, so the H1 underneath is the positioning
    line. Keep it close to the logo and scale it down on narrow screens. */

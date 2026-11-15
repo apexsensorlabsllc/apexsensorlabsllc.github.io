@@ -18,9 +18,9 @@ Apex Crosswalk counts people as they enter and leave, so your lights, heating, a
 
 <div class="grid cards" markdown>
 
--   [__Crosswalk Gateway__](./crosswalk/gateway.md)
+-   [<span class="tile-step">Step 1</span> __Crosswalk Gateway__ <span class="tile-sub">Start here</span>](./crosswalk/gateway.md)
 
--   [__Crosswalk Sensor__](./crosswalk/index.md)
+-   [<span class="tile-step">Step 2</span> __Crosswalk Sensor__ <span class="tile-sub">Once your Gateway is online</span>](./crosswalk/index.md)
 
 -   <span class="tile-static"><strong>Apex Core</strong><span class="tile-badge">Coming Soon</span></span>
 

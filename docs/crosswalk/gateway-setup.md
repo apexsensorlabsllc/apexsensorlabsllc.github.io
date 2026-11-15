@@ -1,4 +1,4 @@
-# Step 2: Connecting and Setup
+# Step 3: Connecting and Setup
 
 Now you need to connect your Gateway to your home Wi-Fi and set up its connection to your smart home app.
 
@@ -6,7 +6,7 @@ Now you need to connect your Gateway to your home Wi-Fi and set up its connectio
 
 ## 1. Wi-Fi Configuration
 
-1.  **Power On:** Plug your Gateway into any USB power outlet. You will need to unplug your device and plug it back in after installing the firmware. 
+1.  **Power On:** Plug your Gateway into a USB power adapter in a wall outlet. It doesn't need to stay connected to your computer. Give it a moment to start up.
 
 2.  **Find the Hotspot:** On your phone or computer, open your Wi-Fi settings. Look for a network starting with `Apex-Setup` — each Gateway adds its own four-character suffix, so yours will look something like `Apex-Setup-ca3f`.
 
@@ -25,6 +25,9 @@ Now you need to connect your Gateway to your home Wi-Fi and set up its connectio
 
 5.  **Reboot:** The Gateway will save the settings and restart. It is now connected to your home network. Reconnect to your home Wi-Fi network on your phone.
 
+    !!! warning "Seeing 'Load failed'?"
+        When the Gateway restarts, your phone loses its connection to the `Apex-Setup` network, so the page may show **Load failed** or stop responding. Your Wi-Fi details are saved. If the Gateway doesn't show up on your network, unplug it, wait 10 seconds, and plug it back in. Then reconnect your phone to your home Wi-Fi and continue below.
+
 ---
 
 ## 2. The Apex Dashboard
@@ -37,14 +40,14 @@ Your Gateway has its own "Control Panel" that you can access from any browser in
 
 2.  **The Main Screen:** You should now see the Apex Gateway dashboard, with the Rooms, Sensors, Settings, and Status tabs across the top.
 
-  ![Apex Gateway dashboard on the Rooms tab, showing no rooms added yet](./pictures/12-Landing.jpg)
+    ![Apex Gateway dashboard on the Rooms tab, showing no rooms added yet](./pictures/12-Landing.jpg)
 
 ---
 
 ## 3. Smart Home Connection (MQTT)
 To send the person counts to Home Assistant or other apps, you need to set up "MQTT".
 
-1.  **Go to Settings:** On the dashboard, click **Settings** and then **MQTT**.
+1.  **Go to Settings:** On the dashboard, click the **Settings** tab at the top, then scroll down to find the **MQTT** section.
 
     ![Gateway dashboard Settings tab](./pictures/13-Settings.jpg)
 
@@ -52,9 +55,19 @@ To send the person counts to Home Assistant or other apps, you need to set up "M
 
     ![MQTT settings card with broker host, port, username, and password fields](./pictures/14-MQTT.jpg)
 
-3.  **Save:** Click **Save**. The dashboard should now say "MQTT Connected".
+    !!! tip "Test before you save"
+        Click **Test Connection** to check your details before saving. If the test fails, double-check the address, username, and password. Fixing them now saves you a restart.
 
-    ![Gateway dashboard showing the MQTT status as connected](./pictures/15-MQTT-Connected.jpg)
+3.  **Save:** Click **Save**. The Gateway restarts to apply your settings.
+
+    !!! info "'Reconnecting' message won't go away?"
+        While the Gateway restarts, the dashboard may show a **Reconnecting** message that stays on screen even after the Gateway is back. This is normal. Wait a minute, then close the message.
+
+4.  **Check the Connection:** Click the **Status** tab at the top of the dashboard. Next to **MQTT**, it should say **Connected**.
+
+    ![Gateway Status tab showing MQTT as Connected](./pictures/15-MQTT-Connected.jpg)
+
+    If it says **Disconnected**, see [MQTT Connection Problems](./gateway-troubleshooting.md#mqtt-connection-problems).
 
 ---
 
@@ -74,11 +87,11 @@ Now we need to add and configure rooms before adding a sensor. Go to the Rooms t
 
 1. **Add a Room:** Type in the room name and click 'Add'
 
-  ![Add Room card on the Rooms tab with a room name typed in](./pictures/15-Rooms.jpg)
+    ![Add Room card on the Rooms tab with a room name typed in](./pictures/15-Rooms.jpg)
 
 2. **Configure Rooms:** Now that you have rooms set up, you can reset the counts, increment, decrement the room count, rename the room, or delete the room. This all syncs over MQTT to your smart home setup.
 
-  ![Rooms tab listing several added rooms with their count controls](./pictures/18-RoomsAdded.jpg)
+    ![Rooms tab listing several added rooms with their count controls](./pictures/18-RoomsAdded.jpg)
 
 3. **Set up Sensors:** Now it's time to go set up your Crosswalk sensors. Click the link below to start setting up a sensor.
 

@@ -1,5 +1,8 @@
 # Getting Started with Apex Crosswalk
 
+!!! warning "Set up your Gateway first"
+    Your sensors talk to the [Crosswalk Gateway](./gateway.md), not directly to your Wi-Fi. A sensor can't pair or report counts until the Gateway is set up and online. If you haven't done that yet, [start with the Gateway](./gateway.md) and come back here afterwards.
+
 ## Count people, not motion.
 
 Apex Crosswalk counts people as they enter and leave, so your lights, heating, and fans respond to real occupancy. Private, local, and energy efficient.
@@ -15,21 +18,21 @@ The Crosswalk Sensor is a high-precision occupancy detector. It comes in two ver
 - **Battery-Powered:** Runs for months on a rechargeable battery, with no wires to the doorway.
 - **Hardwired:** Stays plugged into USB-C power, so there is no battery to charge.
 
-![Crosswalk Sensor box contents laid out: board, case, lid, battery, and mounting strips](./pictures/Crosswalk_Parts.jpeg)
+Your sensor arrives fully assembled in its case. There is nothing to put together.
+
+![Assembled Crosswalk Sensor in its case](./pictures/CW_Finished.jpeg)
 
 === "Battery-Powered"
 
-    *   **1x Crosswalk Sensor Board:** Featuring dual sensing zones.
-    *   **1x 3D Printed Case & Lid:** For sleek mounting.
-    *   **1x LiPo Battery:** Provides months of wireless operation.
-    *   **2x Adhesive Mounting Strips**
+    *   **1x Crosswalk Sensor:** Featuring dual sensing zones, assembled in its case.
+    *   **1x LiPo Battery:** Already inside the case. You'll plug it in during pairing.
+    *   **2x Adhesive Mounting Strips:** In the sensor bag. Keep these for mounting.
     *   **USB-C Charging Cable NOT included**
 
 === "Hardwired"
 
-    *   **1x Crosswalk Sensor Board:** Featuring dual sensing zones.
-    *   **1x 3D Printed Case & Lid:** For sleek mounting.
-    *   **2x Adhesive Mounting Strips**
+    *   **1x Crosswalk Sensor:** Featuring dual sensing zones, assembled in its case.
+    *   **2x Adhesive Mounting Strips:** In the sensor bag. Keep these for mounting.
     *   **USB-C Cable and USB Power Adapter NOT included**
 
 ---
@@ -37,9 +40,6 @@ The Crosswalk Sensor is a high-precision occupancy detector. It comes in two ver
 ## Setup Process
 
 Follow the linear walkthrough to get your Crosswalk sensor up and running.
-
-!!! info "Set up your Gateway first"
-    Your sensors talk to the [Crosswalk Gateway](./gateway.md), not directly to your Wi-Fi. The Gateway needs to be online before a sensor can pair or report counts.
 
 <div class="grid cards" markdown>
 

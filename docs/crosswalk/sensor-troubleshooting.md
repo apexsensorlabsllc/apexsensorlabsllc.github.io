@@ -44,20 +44,21 @@ If you click **Install** and your sensor doesn't appear in the list, or the inst
 ## Count is Backwards or Wrong
 If the room count increases when you leave and decreases when you enter:
 
-1.  **Digital Invert:** Go to your `apex.local` dashboard, click on the sensor, and toggle the **Invert** switch. This will instantly fix the direction without you needing to move the hardware. This can be done on the Apex dashboard, or in Home Assistant via MQTT.
+1.  **Check the Direction:** Stand in the doorway facing the room being entered (the **Side A room** for Dual Room sensors). The sensor's USB-C port should be on your left. If it's on your right, either remount the sensor the other way around or use Digital Invert below.
+2.  **Digital Invert:** Go to your `apex.local` dashboard, open the **Sensors** tab, find the sensor in the list, and click its **Enable invert** button. This will instantly fix the direction without you needing to move the hardware. You can also do this in Home Assistant, from the sensor's device page.
 
-  ![Invert toggle on the sensor's Home Assistant device page](./pictures/25-HA%20Sensor.jpg)
+    ![Enable invert button on the sensor's card in the Apex Gateway dashboard](./pictures/21-PairingSuccess.jpg)
 
-  ![Invert toggle on the sensor entry in the Apex Gateway dashboard](./pictures/21-PairingSuccess.jpg)
+    ![Invert control on the sensor's Home Assistant device page](./pictures/25-HA%20Sensor.jpg)
 
-2.  **Clear Path:** Make sure the door doesn't block the sensor when it's open. The sensor needs a clear "line of sight" straight down through the doorway.
-3.  **Mounting Position:** The sensor must sit at the **top of the doorframe pointing down at the floor**, in the middle of the opening. If it has been mounted lower down or angled across the doorway, it will miss passes. See [Mounting](./sensor-install.md) for placement.
+3.  **Clear Path:** Make sure the door doesn't block the sensor when it's open. The sensor needs a clear "line of sight" straight down through the doorway.
+4.  **Mounting Position:** The sensor must sit at the **top of the doorframe pointing down at the floor**, in the middle of the opening. If it has been mounted lower down or angled across the doorway, it will miss passes. See [Mounting](./sensor-install.md) for placement.
 
 ---
 
 ## Sensor Won't Pair
 1.  **Gateway Mode:** Ensure the Gateway is in **Pairing Mode** (60-second timer active) before you power the sensor on.
-2.  **Power Cycle:** While the Gateway is searching, unplug the sensor's power and plug it back in — the battery's JST connector on the Battery-Powered version, or the USB-C cable on the Hardwired version. The sensor's lights don't show pairing, so watch the dashboard for confirmation instead.
+2.  **Power Cycle:** While the Gateway is searching, unplug the sensor's power and plug it back in. On the Battery-Powered version, slide the back cover partway open and unplug and replug the battery connector. On the Hardwired version, unplug and replug the USB-C cable. The sensor's lights don't show pairing, so watch the dashboard for confirmation instead.
 3.  **Proximity:** Bring the sensor into the same room as the Gateway just for the initial pairing.
 
 ---

@@ -70,18 +70,18 @@ exclude_docs: |
 
 nav:
   - Home: index.md
-  - Crosswalk Gateway:
+  - "1. Crosswalk Gateway":
       - Overview: crosswalk/gateway.md
-      - "Step 1: Flashing": crosswalk/gateway-flashing.md
-      - "Step 2: Connecting & Setup": crosswalk/gateway-setup.md
+      - "Step 1: Attach the Antenna": crosswalk/gateway-assembly.md
+      - "Step 2: Flashing": crosswalk/gateway-flashing.md
+      - "Step 3: Connecting & Setup": crosswalk/gateway-setup.md
       - Updating Firmware: crosswalk/gateway-updates.md
       - Troubleshooting: crosswalk/gateway-troubleshooting.md
-  - Crosswalk Sensor:
+  - "2. Crosswalk Sensor":
       - Overview: crosswalk/index.md
       - "Step 1: Flashing": crosswalk/sensor-flashing.md
       - "Step 2: Pairing & Configuration": crosswalk/sensor-config.md
-      - "Step 3: Assembly": crosswalk/sensor-assembly.md
-      - "Step 4: Mounting": crosswalk/sensor-install.md
+      - "Step 3: Mounting": crosswalk/sensor-install.md
       - Troubleshooting: crosswalk/sensor-troubleshooting.md
   - Support: support.md
   - apexsensorlabs.com: https://apexsensorlabs.com

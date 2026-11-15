@@ -12,25 +12,26 @@ The Crosswalk Gateway is the central coordinator for your person-counting sensor
 
 *   **1x Crosswalk Gateway:** Powered by an ESP32-S3.
 *   **1x Crosswalk Gateway Case:** Fits the Crosswalk Gateway board
-*   **1x u.FL/IPEX to SMA adapter:** Attaches ESP32-S3 to Antenna
-*   **1x 2.4GHz Antenna:** For Wi-Fi and ESP-NOW
+*   **1x u.FL/IPEX to SMA adapter:** Already installed inside the case. Connects the Gateway board to the antenna.
+*   **1x 2.4GHz Antenna:** For Wi-Fi and ESP-NOW. You'll screw this on in Step 1.
 *   **USB-C Cable NOT included:** You'll need one to flash the Gateway and to power it afterwards.
 
 ---
 
 ## Setup Process
 
-To get started, follow our linear walkthrough to flash and configure your Gateway.
+To get started, follow our linear walkthrough to set up your Gateway.
 
-1.  **Flashing:** Install the latest firmware.
-2.  **Connecting & Setup:** Connect to Wi-Fi and MQTT.
+1.  **Attach the Antenna:** Screw the antenna onto the Gateway.
+2.  **Flashing:** Install the latest firmware.
+3.  **Connecting & Setup:** Connect to Wi-Fi and MQTT.
 
 !!! info "Dependency"
     You must complete this Gateway setup **before** attempting to install your Crosswalk Sensors. Sensors will not be able to transmit data until a Gateway is online and within range.
 
 <div class="grid cards" markdown>
 
--   [:octicons-arrow-right-24: **Start Step 1: Flashing**](./gateway-flashing.md)
+-   [:octicons-arrow-right-24: **Start Step 1: Attach the Antenna**](./gateway-assembly.md)
 
 </div>
 
