@@ -9,13 +9,12 @@ If your Gateway is having trouble connecting to Wi-Fi or coordinating sensors, f
 
 ---
 
-## Setup Page Says "Load failed"
-After you click **Connect** on the Wi-Fi setup page, the Gateway saves your Wi-Fi details and restarts. Your phone loses its connection to the `Apex-Setup` network at the same moment, so the page may show **Load failed** or stop responding. This is expected.
+## Gateway Doesn't Show Up After Wi-Fi Setup
+If you've reconnected your phone to your home Wi-Fi but the dashboard won't load a minute or so after setup:
 
-1.  **Power Cycle:** Unplug the Gateway, wait 10 seconds, and plug it back in. It will use the Wi-Fi details you just saved.
-2.  **Reconnect Your Phone:** Switch your phone back to your home Wi-Fi.
-3.  **Open the Dashboard:** Visit `http://apex.local`. If it loads, the Gateway is on your network.
-4.  **Still Not Connecting?** If the `Apex-Setup` network appears again, the Gateway couldn't join your Wi-Fi. Connect to it and re-enter your network name and password, making sure you pick a **2.4GHz** network.
+1.  **Try the Number Address:** If the setup page showed a number address such as `http://192.168.1.50`, try that instead of `http://apex.local`. Some phones, especially Android, can't open `apex.local`.
+2.  **Check for the Setup Network:** Look at your phone's Wi-Fi list. If the `Apex-Setup` network is back, the Gateway couldn't join your Wi-Fi, most likely because of a wrong password. Connect to it, visit `http://192.168.4.1`, and enter your network name and password again, making sure you pick a **2.4GHz** network.
+3.  **Power Cycle:** If neither works, unplug the Gateway, wait 10 seconds, and plug it back in. It will try your saved Wi-Fi details again.
 
 ---
 

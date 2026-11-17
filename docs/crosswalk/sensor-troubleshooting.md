@@ -47,7 +47,7 @@ If the room count increases when you leave and decreases when you enter:
 1.  **Check the Direction:** Stand in the doorway facing the room being entered (the **Side A room** for Dual Room sensors). The sensor's USB-C port should be on your left. If it's on your right, either remount the sensor the other way around or use Digital Invert below.
 2.  **Digital Invert:** Go to your `apex.local` dashboard, open the **Sensors** tab, find the sensor in the list, and click its **Enable invert** button. This will instantly fix the direction without you needing to move the hardware. You can also do this in Home Assistant, from the sensor's device page.
 
-    ![Enable invert button on the sensor's card in the Apex Gateway dashboard](./pictures/21-PairingSuccess.jpg)
+    ![Enable invert button on the sensor's card in the Apex Gateway dashboard](./pictures/Sensor_Added.jpg)
 
     ![Invert control on the sensor's Home Assistant device page](./pictures/25-HA%20Sensor.jpg)
 
@@ -57,8 +57,8 @@ If the room count increases when you leave and decreases when you enter:
 ---
 
 ## Sensor Won't Pair
-1.  **Gateway Mode:** Ensure the Gateway is in **Pairing Mode** (60-second timer active) before you power the sensor on.
-2.  **Power Cycle:** While the Gateway is searching, unplug the sensor's power and plug it back in. On the Battery-Powered version, slide the back cover partway open and unplug and replug the battery connector. On the Hardwired version, unplug and replug the USB-C cable. The sensor's lights don't show pairing, so watch the dashboard for confirmation instead.
+1.  **Pairing On:** Make sure pairing is turned on before you power the sensor on. On the dashboard's **Sensors** tab, the banner should say **Pairing enabled**. If it doesn't, click **Enable Pairing**. Pairing switches off after 30 minutes and whenever the Gateway restarts, so check it's still on.
+2.  **Power Cycle:** While pairing is on, unplug the sensor's power and plug it back in. On the Battery-Powered version, slide the back cover partway open and unplug and replug the battery connector. On the Hardwired version, unplug and replug the USB-C cable. The sensor's lights don't show pairing, so watch the dashboard for confirmation instead.
 3.  **Proximity:** Bring the sensor into the same room as the Gateway just for the initial pairing.
 
 ---
@@ -67,7 +67,7 @@ If the room count increases when you leave and decreases when you enter:
 If your sensor's battery dies or you lose power to your house, don't worry!
 
 - **No Re-Pairing Needed:** The Gateway remembers your sensors. Once you charge the sensor or the power comes back on, the sensor will automatically find the Gateway again.
-- **Auto-Sync:** You do **not** need to click the "Pair" button on the dashboard again for sensors you have already set up.
+- **Auto-Sync:** You do **not** need to turn on pairing again for sensors you have already set up.
 
 ---
 

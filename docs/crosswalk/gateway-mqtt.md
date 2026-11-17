@@ -11,7 +11,7 @@ This page lists every MQTT topic the Crosswalk Gateway uses. It's for people who
     If the MQTT settings are left blank, the Gateway runs on its own and nothing on this page is available. You can still use the `apex.local` dashboard.
 
 !!! info "Firmware version"
-    Items marked **1.2.12+** need Gateway firmware 1.2.12 or later. Everything else works on all current firmware. See [Updating Firmware](./gateway-updates.md) to check your version.
+    Items marked **1.2.13+** need Gateway firmware 1.2.13 or later. Everything else works on all current firmware. See [Updating Firmware](./gateway-updates.md) to check your version.
 
 ---
 
@@ -75,7 +75,7 @@ Published for every paired sensor.
 | :--- | :--- |
 | `apex/system/total_occupancy` | Total people across all rooms, e.g. `3`. |
 | `apex/system/sensor_count` | Number of sensors currently online. |
-| `apex/system/pairing` | `ON` while the Gateway is accepting new sensors, otherwise `OFF`. **1.2.12+** |
+| `apex/system/pairing` | `ON` while the Gateway is accepting new sensors, otherwise `OFF`. **1.2.13+** |
 
 ---
 
@@ -91,8 +91,8 @@ Publish to these topics to control the Gateway.
 | `apex/sensor/<sensor>/invert/cmd` | `ON` or `OFF` | Inverts the sensor's counting direction, or sets it back. |
 | `apex/sensor/<sensor>/repair/cmd` | Anything | Tells the sensor to pair again, the same as **Force Re-pair** on the dashboard. |
 | `apex/system/reset_all/cmd` | Anything | Sets every room's count to 0. |
-| `apex/system/pairing/cmd` | `ON` or `OFF` | Opens or closes pairing. Pairing closes on its own after 30 minutes, or if the Gateway restarts. **1.2.12+** |
-| `apex/system/time/cmd` | Unix time in seconds, e.g. `1763200000` | Sets the Gateway's clock. Only needed if the Gateway can't get the time from the internet. **1.2.12+** |
+| `apex/system/pairing/cmd` | `ON` or `OFF` | Turns pairing on or off. Pairing turns off on its own after 30 minutes, or if the Gateway restarts. Sending `ON` while it's already on restarts the 30 minutes. **1.2.13+** |
+| `apex/system/time/cmd` | Unix time in seconds, e.g. `1763200000` | Sets the Gateway's clock. Optional: you don't normally need this. See [Timestamps](#timestamps). **1.2.13+** |
 
 !!! danger "Don't send commands with the retain flag"
     The Gateway's own data is retained by the broker so new apps get current values straight away. Commands must **not** be retained. A retained command is sent to the Gateway again every time it reconnects, so a retained `reset/cmd` would zero that room after every restart.
@@ -101,10 +101,26 @@ Publish to these topics to control the Gateway.
 
 ## Timestamps
 
-`last_changed` and `last_seen` are sent as Unix time in seconds, e.g. `1763200000`.
+!!! warning "Format changed in 1.2.13"
+    Before 1.2.13, `last_changed` and `last_seen` were a plain number. They're now a small JSON message. If you read these topics in Node-RED or a script, update it when you upgrade. Home Assistant handles the change for you.
 
-- **1.2.12+:** the Gateway gets the time from the internet when it starts. Until it has the time, these topics send `0`, which means "unknown". If your network has no internet access, set the clock with `apex/system/time/cmd`.
-- **Earlier firmware:** the Gateway has no real clock, so these values aren't reliable. Use the time your broker receives the message instead.
+On **1.2.13+**, `last_changed` and `last_seen` look like this:
+
+```json
+{"t": 1763200000, "age": 42}
+```
+
+| Field | Meaning |
+| :--- | :--- |
+| `t` | When it happened, as Unix time in seconds. `0` if the Gateway doesn't know the time yet. |
+| `age` | How many seconds before this message it happened. `-1` if it happened before the Gateway last restarted. |
+
+**To get the time:** use `t` if it isn't `0`. Otherwise, if `age` isn't `-1`, subtract `age` from the time the message arrived. If `t` is `0` and `age` is `-1`, the time is unknown.
+
+The Gateway sets its clock on its own, from the internet or from your browser when you open the dashboard, so you don't need to set anything up. `apex/system/time/cmd` is there if you'd rather set the clock yourself.
+
+!!! info "Earlier firmware"
+    Before 1.2.13, the Gateway has no real clock, so `last_changed` and `last_seen` aren't reliable. Use the time your broker receives the message instead.
 
 ---
 
@@ -143,6 +159,8 @@ In Node-RED, an **mqtt in** node subscribed to `apex/room/+/count` gives you eve
 ## Home Assistant Discovery
 
 The Gateway also publishes the setup messages Home Assistant uses to find it, under the `homeassistant/` prefix. If your system uses a different prefix, change **Discovery prefix** in the MQTT section of the dashboard's **Settings** tab. Other systems can ignore these messages.
+
+On **1.2.13+**, the Gateway also listens on `homeassistant/status` (or `<your prefix>/status`). Whenever Home Assistant restarts and sends `online` there, the Gateway sends all of its current data again.
 
 ??? info "Diagnostic topics"
     Each sensor also reports battery-life statistics under `apex/sensor/<sensor>/`: `wakes`, `awake_ms`, `queue_len`, `cum_wakes`, `cum_events`, `cum_awake_ms`, and `cold_boots`. They're used by Apex support to investigate battery drain, and they may change between firmware versions, so don't build automations on them.

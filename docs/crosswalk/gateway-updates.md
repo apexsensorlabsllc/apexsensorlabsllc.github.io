@@ -3,7 +3,14 @@
 Your Crosswalk Gateway updates itself over your home network. You do not need to plug it back into a computer or use the install button again.
 
 !!! info "Current Version"
-    The latest Gateway firmware is **1.2.10**. Your Gateway shows the version it is currently running on the dashboard.
+    The latest Gateway firmware is **1.2.13**. Your Gateway shows the version it is currently running on the dashboard.
+
+??? info "What's new in 1.2.13"
+    - **Easier pairing:** **Enable Pairing** replaces the 60-second pairing window. Pairing stays on while you add as many sensors as you like, until you turn it off (or 30 minutes pass).
+    - **Real times:** "Last Seen" and "Last Changed" now show the correct date and time in Home Assistant, instead of January 1970. There's nothing to set up.
+    - **Smoother Wi-Fi setup:** the setup page no longer shows "Load failed" after you connect, and it shows the Gateway's number address as well as `apex.local`.
+    - **Home Assistant restarts:** the Gateway sends all its data again whenever Home Assistant restarts.
+    - **For MQTT users:** timestamp topics have a new format, and pairing can be turned on or off over MQTT. See the [MQTT Reference](./gateway-mqtt.md).
 
 ---
 

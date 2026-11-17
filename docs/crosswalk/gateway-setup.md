@@ -23,10 +23,17 @@ Now you need to connect your Gateway to your home Wi-Fi and set up its connectio
     !!! tip "List says 'No networks found'?"
         Give the Gateway a few seconds to finish scanning and reload the page. You can also type your network name into the top box by hand.
 
-5.  **Reboot:** The Gateway will save the settings and restart. It is now connected to your home network. Reconnect to your home Wi-Fi network on your phone.
+5.  **Connected:** A message appears below the **Connect** button saying **Connected!**, with two addresses for your Gateway: `http://apex.local` and a number address such as `http://192.168.1.50`. **Write down the number address**, since you may need it in the next section. The Gateway then restarts and joins your home network.
 
-    !!! warning "Seeing 'Load failed'?"
-        When the Gateway restarts, your phone loses its connection to the `Apex-Setup` network, so the page may show **Load failed** or stop responding. Your Wi-Fi details are saved. If the Gateway doesn't show up on your network, unplug it, wait 10 seconds, and plug it back in. Then reconnect your phone to your home Wi-Fi and continue below.
+    <img src="../pictures/Wifi_Setup.png" alt="Apex Gateway Setup page with the Connected! message and the Gateway's addresses below the Connect button" style="height: 400px; width: auto;">
+
+    !!! info "The message is red, but it worked"
+        The **Connected!** message is shown in red text. As long as it says **Connected!**, your Gateway has joined your Wi-Fi.
+
+    !!! info "Saw a different message?"
+        Sometimes your phone drops off the `Apex-Setup` network before the Gateway can reply. The page will then say **The gateway is joining your WiFi**. That's normal: carry on to the next step. If the Gateway doesn't show up within a minute, see [Gateway Doesn't Show Up After Wi-Fi Setup](./gateway-troubleshooting.md#gateway-doesnt-show-up-after-wi-fi-setup).
+
+6.  **Reconnect Your Phone:** Switch your phone back to your home Wi-Fi network.
 
 ---
 
@@ -36,7 +43,7 @@ Your Gateway has its own "Control Panel" that you can access from any browser in
 1.  **Open Browser:** Type `http://apex.local` into your browser's address bar.
 
     !!! tip "Trouble finding the dashboard?"
-        If `http://apex.local` doesn't load, your router may not support local names. You can find the **IP address** of your Gateway in your router's device list (it will appear as 'Crosswalk-Gateway') and type that number into your browser instead.
+        Some phones (especially Android) and routers don't support `apex.local`. Type the number address from the **Connected!** message instead, e.g. `http://192.168.1.50`. If you didn't write it down, look for 'Crosswalk-Gateway' in your router's device list to find it.
 
 2.  **The Main Screen:** You should now see the Apex Gateway dashboard, with the Rooms, Sensors, Settings, and Status tabs across the top.
 
