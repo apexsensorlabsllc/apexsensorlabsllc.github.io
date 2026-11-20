@@ -84,5 +84,6 @@ nav:
       - "Step 2: Pairing & Configuration": crosswalk/sensor-config.md
       - "Step 3: Mounting": crosswalk/sensor-install.md
       - Troubleshooting: crosswalk/sensor-troubleshooting.md
+      - Hardware & Pinout: crosswalk/sensor-hardware.md
   - Support: support.md
   - apexsensorlabs.com: https://apexsensorlabs.com
