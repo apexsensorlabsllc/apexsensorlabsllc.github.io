@@ -6,7 +6,9 @@ The Crosswalk Sensor is the part that goes on your door. You need to flash it be
     To ensure you have the absolute latest features and the most secure, privacy-focused version of our local software, we start every setup by quickly updating the device's firmware. This ensures your sensor is running the most battery-efficient version of our code.
 
 !!! info "Browser Requirement"
-    You **must** use **Google Chrome** or **Microsoft Edge** on a computer to flash your device. Other browsers like Safari or Firefox do not support the connection needed.
+    You **must** use **Google Chrome** or **Microsoft Edge** on a **Windows PC or Mac** to flash your device. We do not support other browsers for flashing.
+
+    **Reading this on your phone?** Open **docs.apexsensorlabs.com** on your computer and go to **Crosswalk Sensor → Step 1: Flashing**.
 
 ---
 
@@ -28,13 +30,13 @@ You don't need to open the case to flash the sensor. The BOOT button sits under 
 
 2.  **Flash:** Choose the tab that matches your sensor, then click its **Install** button.
 
-    <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+    <script type="module" src="https://unpkg.com/esp-web-tools@10.5.2/dist/web/install-button.js?module"></script>
 
     === "Battery-Powered"
 
         <div align="center">
             <esp-web-install-button manifest="../sensor-manifest.json">
-                <button slot="install" class="md-button md-button--primary">Install Crosswalk Sensor</button>
+                <button slot="activate" class="md-button md-button--primary">Install Crosswalk Sensor</button>
             </esp-web-install-button>
         </div>
 
@@ -42,7 +44,7 @@ You don't need to open the case to flash the sensor. The BOOT button sits under 
 
         <div align="center">
             <esp-web-install-button manifest="../cw-hw-manifest.json">
-                <button slot="install" class="md-button md-button--primary">Install Crosswalk Sensor (Hardwired)</button>
+                <button slot="activate" class="md-button md-button--primary">Install Crosswalk Sensor (Hardwired)</button>
             </esp-web-install-button>
         </div>
 
@@ -69,7 +71,7 @@ You don't need to open the case to flash the sensor. The BOOT button sits under 
 
         <div align="center">
             <esp-web-install-button manifest="../sensor-beta-manifest.json">
-                <button slot="install" class="md-button">Install Crosswalk Sensor (Beta)</button>
+                <button slot="activate" class="md-button">Install Crosswalk Sensor (Beta)</button>
             </esp-web-install-button>
         </div>
 
@@ -77,7 +79,7 @@ You don't need to open the case to flash the sensor. The BOOT button sits under 
 
         <div align="center">
             <esp-web-install-button manifest="../cw-hw-beta-manifest.json">
-                <button slot="install" class="md-button">Install Crosswalk Sensor (Hardwired, Beta)</button>
+                <button slot="activate" class="md-button">Install Crosswalk Sensor (Hardwired, Beta)</button>
             </esp-web-install-button>
         </div>
 

@@ -6,7 +6,9 @@ The Crosswalk Gateway is the "hub" for your Apex Crosswalk sensors. Before it jo
     To ensure you have the absolute latest features and the most secure, privacy-focused version of our local software, we start every setup by quickly updating the device's firmware. This ensures your hardware is running the best possible version of the Crosswalk Gateway before it joins your home.
 
 !!! info "Browser Requirement"
-    You **must** use **Google Chrome** or **Microsoft Edge** on a computer to flash your device. We do not support other browsers for flashing.
+    You **must** use **Google Chrome** or **Microsoft Edge** on a **Windows PC or Mac** to flash your device. We do not support other browsers for flashing.
+
+    **Reading this on your phone?** Open **docs.apexsensorlabs.com** on your computer and go to **Crosswalk Gateway → Step 2: Flashing**.
 
 ---
 
@@ -28,9 +30,9 @@ To flash the Gateway, you need to hold down its BOOT button while you plug it in
 2.  **Start Flash:** Click the **Install** button below.
 
     <div align="center">
-        <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+        <script type="module" src="https://unpkg.com/esp-web-tools@10.5.2/dist/web/install-button.js?module"></script>
         <esp-web-install-button manifest="../gateway-manifest.json">
-            <button slot="install" class="md-button md-button--primary">Install Crosswalk Gateway</button>
+            <button slot="activate" class="md-button md-button--primary">Install Crosswalk Gateway</button>
         </esp-web-install-button>
     </div>
 
@@ -64,7 +66,7 @@ To flash the Gateway, you need to hold down its BOOT button while you plug it in
 
     <div align="center">
         <esp-web-install-button manifest="../gateway-beta-manifest.json">
-            <button slot="install" class="md-button">Install Crosswalk Gateway (Beta)</button>
+            <button slot="activate" class="md-button">Install Crosswalk Gateway (Beta)</button>
         </esp-web-install-button>
     </div>
 

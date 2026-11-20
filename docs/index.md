@@ -28,5 +28,8 @@ Apex Crosswalk counts people as they enter and leave, so your lights, heating, a
 
 </div>
 
+!!! info "Scanned the QR code? You'll also need a computer"
+    You can follow this guide on your phone, but to install the firmware you'll need **Google Chrome** or **Microsoft Edge** on a **Windows PC or Mac**. When you get to a flashing step, open **docs.apexsensorlabs.com** on your computer and continue there.
+
 ---
 <p align="center">Privacy Focused. Energy Savings. No Subscriptions.</p>

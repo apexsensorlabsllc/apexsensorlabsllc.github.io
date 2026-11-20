@@ -26,6 +26,9 @@ To get started, follow our linear walkthrough to set up your Gateway.
 2.  **Flashing:** Install the latest firmware.
 3.  **Connecting & Setup:** Connect to Wi-Fi and MQTT.
 
+!!! info "You'll need a computer for Step 2"
+    To flash the Gateway, you'll need **Google Chrome** or **Microsoft Edge** on a **Windows PC or Mac**. You'll use your phone in Step 3 to connect the Gateway to your Wi-Fi.
+
 !!! info "Dependency"
     You must complete this Gateway setup **before** attempting to install your Crosswalk Sensors. Sensors will not be able to transmit data until a Gateway is online and within range.
 

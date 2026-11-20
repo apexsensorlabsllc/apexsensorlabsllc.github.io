@@ -41,6 +41,9 @@ Your sensor arrives fully assembled in its case. There is nothing to put togethe
 
 Follow the linear walkthrough to get your Crosswalk sensor up and running.
 
+!!! info "You'll need a computer for Step 1"
+    To flash the sensor, you'll need **Google Chrome** or **Microsoft Edge** on a **Windows PC or Mac**.
+
 <div class="grid cards" markdown>
 
 -   [:octicons-arrow-right-24: **Start Step 1: Flashing**](./sensor-flashing.md)
