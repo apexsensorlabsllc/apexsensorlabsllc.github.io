@@ -1,0 +1,1659 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Setup guides and documentation for Apex Crosswalk — local, battery-powered person counting for your smart home.">
+      
+      
+      
+        <link rel="canonical" href="https://docs.apexsensorlabs.com/crosswalk/sensor-hardware/">
+      
+      
+        <link rel="prev" href="../sensor-troubleshooting/">
+      
+      
+        <link rel="next" href="../../support/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/apex_logo_dark_transparent_black_filled.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Hardware & Pinout - Apex Sensor Labs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CDM+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"DM Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <!-- `page` is undefined while MkDocs renders theme templates such as 404.html,
+       so every lookup below has to tolerate that. -->
+  
+  
+  
+  
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Apex Sensor Labs">
+  <meta property="og:title" content="Hardware & Pinout">
+  <meta property="og:description" content="Setup guides and documentation for Apex Crosswalk — local, battery-powered person counting for your smart home.">
+  <meta property="og:image" content="https://docs.apexsensorlabs.com/assets/apex-social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://docs.apexsensorlabs.com/crosswalk/sensor-hardware/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hardware & Pinout">
+  <meta name="twitter:description" content="Setup guides and documentation for Apex Crosswalk — local, battery-powered person counting for your smart home.">
+  <meta name="twitter:image" content="https://docs.apexsensorlabs.com/assets/apex-social-card.png">
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hardware-pinout" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <a href="https://apexsensorlabs.com" class="apex-announce">
+    Apex Sensor Labs &mdash; visit the main site<span class="apex-announce-arrow">&rarr;</span>
+  </a>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Apex Sensor Labs" class="md-header__button md-logo" aria-label="Apex Sensor Labs" data-md-component="logo">
+      
+  <img src="../../assets/apex_logo_dark_transparent_black_filled.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apex Sensor Labs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hardware & Pinout
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../gateway/" class="md-tabs__link">
+          
+  
+  
+  1. Crosswalk Gateway
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  2. Crosswalk Sensor
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../support/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Support
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://apexsensorlabs.com" class="md-tabs__link">
+        
+  
+  
+    
+  
+  apexsensorlabs.com
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Apex Sensor Labs" class="md-nav__button md-logo" aria-label="Apex Sensor Labs" data-md-component="logo">
+      
+  <img src="../../assets/apex_logo_dark_transparent_black_filled.png" alt="logo">
+
+    </a>
+    Apex Sensor Labs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Crosswalk Gateway
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1. Crosswalk Gateway
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway-assembly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Step 1: Attach the Antenna
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway-flashing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Step 2: Flashing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Step 3: Connecting & Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway-updates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Updating Firmware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway-troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gateway-mqtt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MQTT Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Crosswalk Sensor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2. Crosswalk Sensor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sensor-flashing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Step 1: Flashing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sensor-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Step 2: Pairing & Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sensor-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Step 3: Mounting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sensor-troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware & Pinout
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware & Pinout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        At a Glance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pinout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pinout
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pinout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i2c-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I²C Addresses
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distance-sensor-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distance Sensor Power
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Distance Sensor Power">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rules-for-your-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rules for Your Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Code
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://apexsensorlabs.com" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    apexsensorlabs.com
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        At a Glance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pinout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pinout
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pinout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i2c-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I²C Addresses
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distance-sensor-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distance Sensor Power
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Distance Sensor Power">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rules-for-your-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rules for Your Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Code
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="hardware-pinout">Hardware &amp; Pinout</h1>
+<div class="admonition tip">
+<p class="admonition-title">Built something with your Crosswalk? Tell us!</p>
+<p>We'd love to hear how you've written your own code or used your Crosswalk Sensor in a new way. Email us at <a href="mailto:contact@apexsensorlabs.com">contact@apexsensorlabs.com</a> and share your project.</p>
+</div>
+<p>This page is for people who want to write their own firmware for the Crosswalk Sensor, for example with ESPHome or the Arduino IDE. It lists what's connected to each pin and how to power the distance sensors.</p>
+<div class="admonition warning">
+<p class="admonition-title">Advanced, and not supported</p>
+<p>Custom firmware isn't supported by Apex Sensor Labs.</p>
+<ul>
+<li><strong>It won't work with the Crosswalk Gateway.</strong> The Gateway only talks to the official sensor firmware.</li>
+<li><strong>Battery life depends on your code.</strong> The official firmware sleeps between people walking past to last months on a charge. Firmware that keeps Wi-Fi on will drain the battery much faster.</li>
+</ul>
+<p><strong>You can always go back.</strong> Reinstall the official firmware from the <a href="../sensor-flashing/">Sensor Flashing</a> page. Please do that before contacting support.</p>
+</div>
+<hr />
+<h2 id="at-a-glance">At a Glance</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Module</strong></td>
+<td style="text-align: left;">ESP32-C6-MINI-1-N4 (ESP32-C6, 4 MB flash)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Distance sensors</strong></td>
+<td style="text-align: left;">2× VL53L1X time-of-flight sensors, looking down through the doorway</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Motion sensor</strong></td>
+<td style="text-align: left;">AS312 PIR</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Door sensors</strong></td>
+<td style="text-align: left;">2× AH1912 hall-effect sensors (left and right)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Battery gauge</strong></td>
+<td style="text-align: left;">MAX17048 (Battery-Powered version only)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>USB-C</strong></td>
+<td style="text-align: left;">Connected to the ESP32-C6's built-in USB, for flashing and serial output. No extra driver needed.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Buttons</strong></td>
+<td style="text-align: left;"><strong>BOOT</strong> (GPIO9) and <strong>RESET</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The Battery-Powered and Hardwired versions use the same board. The Hardwired version has no battery, so the battery gauge isn't powered.</p>
+<hr />
+<h2 id="pinout">Pinout</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">GPIO</th>
+<th style="text-align: left;">Connected to</th>
+<th style="text-align: left;">Direction</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>2</strong></td>
+<td style="text-align: left;">Distance sensor power switch</td>
+<td style="text-align: left;">Output</td>
+<td style="text-align: left;"><strong>LOW = on, HIGH = off.</strong> See <a href="#distance-sensor-power">Distance Sensor Power</a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3</strong></td>
+<td style="text-align: left;">Motion sensor (PIR) output</td>
+<td style="text-align: left;">Input</td>
+<td style="text-align: left;">HIGH for about 2.3 seconds after motion. Can wake the ESP32-C6 from deep sleep.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>4</strong></td>
+<td style="text-align: left;">Distance sensors I²C <strong>SDA</strong></td>
+<td style="text-align: left;">I²C</td>
+<td style="text-align: left;">Shared by both distance sensors. Boot-mode (strapping) pin.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>5</strong></td>
+<td style="text-align: left;">Distance sensors I²C <strong>SCL</strong></td>
+<td style="text-align: left;">I²C</td>
+<td style="text-align: left;">Shared by both distance sensors. Boot-mode (strapping) pin.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>6</strong></td>
+<td style="text-align: left;">Battery gauge I²C <strong>SDA</strong></td>
+<td style="text-align: left;">I²C</td>
+<td style="text-align: left;">A separate bus from the distance sensors.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>7</strong></td>
+<td style="text-align: left;">Battery gauge I²C <strong>SCL</strong></td>
+<td style="text-align: left;">I²C</td>
+<td style="text-align: left;">A separate bus from the distance sensors.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>18</strong></td>
+<td style="text-align: left;">Distance sensor 1 <strong>XSHUT</strong></td>
+<td style="text-align: left;">Output</td>
+<td style="text-align: left;">LOW holds the sensor off. Used to give the two sensors different addresses.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>19</strong></td>
+<td style="text-align: left;">Distance sensor 2 <strong>XSHUT</strong></td>
+<td style="text-align: left;">Output</td>
+<td style="text-align: left;">LOW holds the sensor off. Used to give the two sensors different addresses.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>21</strong></td>
+<td style="text-align: left;">Power LED</td>
+<td style="text-align: left;">Output</td>
+<td style="text-align: left;">HIGH = on.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>22</strong></td>
+<td style="text-align: left;">Left door hall sensor</td>
+<td style="text-align: left;">Input</td>
+<td style="text-align: left;">LOW when a magnet is near. <strong>Enable the internal pull-up</strong>: there's no pull-up on the board.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>23</strong></td>
+<td style="text-align: left;">Right door hall sensor</td>
+<td style="text-align: left;">Input</td>
+<td style="text-align: left;">LOW when a magnet is near. <strong>Enable the internal pull-up</strong>: there's no pull-up on the board.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>9</strong></td>
+<td style="text-align: left;">BOOT button</td>
+<td style="text-align: left;">Input</td>
+<td style="text-align: left;">LOW when pressed. Hold it while plugging in USB to enter download mode.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>12 / 13</strong></td>
+<td style="text-align: left;">USB D− / D+</td>
+<td style="text-align: left;">USB</td>
+<td style="text-align: left;">Built-in USB. Don't use these as GPIO.</td>
+</tr>
+</tbody>
+</table>
+<p>All other GPIOs are unused, and none are brought out to a connector.</p>
+<h3 id="i2c-addresses">I²C Addresses</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Device</th>
+<th style="text-align: left;">Bus</th>
+<th style="text-align: left;">Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">VL53L1X (each)</td>
+<td style="text-align: left;">GPIO4 / GPIO5</td>
+<td style="text-align: left;"><strong>0x29</strong> at power-up. Both start at the same address. See below.</td>
+</tr>
+<tr>
+<td style="text-align: left;">MAX17048</td>
+<td style="text-align: left;">GPIO6 / GPIO7</td>
+<td style="text-align: left;"><strong>0x36</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The official firmware moves the distance sensors to <strong>0x30</strong> and <strong>0x32</strong>. You can use any free addresses.</p>
+<hr />
+<h2 id="distance-sensor-power">Distance Sensor Power</h2>
+<p>The two distance sensors run on their own <strong>switched 3.3 V supply</strong>, so they can be turned off completely while the ESP32-C6 is in deep sleep. GPIO2 controls a switch on that supply:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">GPIO2</th>
+<th style="text-align: left;">Distance sensors</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>LOW</strong></td>
+<td style="text-align: left;"><strong>Powered</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HIGH</strong></td>
+<td style="text-align: left;"><strong>Off</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition danger">
+<p class="admonition-title">LOW turns it on</p>
+<p>It's the opposite of what most people expect. If your distance sensors don't respond at all, check that you're driving GPIO2 <strong>LOW</strong>.</p>
+</div>
+<p><strong>What's on the switched supply:</strong> both VL53L1X sensors, plus the pull-up resistors on their I²C lines (GPIO4/5) and their XSHUT lines (GPIO18/19). Nothing else.</p>
+<p><strong>What's not on the switched supply:</strong> the ESP32-C6, the motion sensor, both door sensors, and the battery gauge (powered by the battery) stay powered when GPIO2 is HIGH. The power LED isn't on the switched supply either. Your code turns it on and off with GPIO21.</p>
+<h3 id="rules-for-your-code">Rules for Your Code</h3>
+<ol>
+<li><strong>It starts off.</strong> The switch is held off until your code drives GPIO2 LOW, so the distance sensors are unpowered at boot.</li>
+<li><strong>Wait before talking to the sensors.</strong> After driving GPIO2 LOW, wait at least <strong>70 ms</strong> before any I²C traffic. The official firmware waits 100 ms after switching it back on.</li>
+<li>
+<p><strong>Give the sensors different addresses every time you power them up.</strong> Both start at 0x29. Hold both XSHUT pins LOW, then:</p>
+<ol>
+<li>Set GPIO18 HIGH, wait 5 ms, and move that sensor to a new address.</li>
+<li>Set GPIO19 HIGH, wait 5 ms, and move that sensor to a different address.</li>
+</ol>
+<p>Switching the supply off and on resets both sensors to 0x29, so repeat this after every power cycle.
+4.  <strong>Turning the supply off:</strong> stop ranging first, then drive both XSHUT pins LOW, then set GPIO2 HIGH. Talking to unpowered sensors just times out, and leaving XSHUT HIGH can feed power into the sensors through the pin.
+5.  <strong>Keep it off through deep sleep.</strong> If your code uses deep sleep, hold GPIO2 HIGH while asleep (in Arduino: <code>rtc_gpio_hold_en(GPIO_NUM_2)</code>, and <code>rtc_gpio_hold_dis</code> when you wake). Otherwise the pin floats, the switch can partly turn on, and the distance sensors drain the battery while the board is asleep.
+6.  <strong>Don't drive GPIO4/5 LOW at boot.</strong> They're boot-mode (strapping) pins.</p>
+</li>
+</ol>
+<p>The distance sensors' interrupt pins aren't connected, so read them by polling.</p>
+<hr />
+<h2 id="example-code">Example Code</h2>
+<p>These examples show the basics: powering the distance sensors, reading them, and reading the motion and door sensors.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Arduino</label><label for="__tabbed_1_2">ESPHome</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Uses the <strong>VL53L1X</strong> library by Pololu and the <strong>SparkFun MAX1704x Fuel Gauge</strong> library, both available in the Arduino Library Manager. Select the <strong>ESP32C6 Dev Module</strong> board and turn on <strong>USB CDC On Boot</strong> to see the output over USB.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Wire.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;VL53L1X.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SparkFun_MAX1704x_Fuel_Gauge_Arduino_Library.h&gt;</span>
+
+<span class="cp">#define PIN_SENSOR_POWER 2    </span><span class="c1">// LOW = distance sensors on</span>
+<span class="cp">#define PIN_PIR          3</span>
+<span class="cp">#define PIN_SDA          4    </span><span class="c1">// distance sensors</span>
+<span class="cp">#define PIN_SCL          5</span>
+<span class="cp">#define PIN_GAUGE_SDA    6    </span><span class="c1">// battery gauge</span>
+<span class="cp">#define PIN_GAUGE_SCL    7</span>
+<span class="cp">#define PIN_XSHUT_1      18</span>
+<span class="cp">#define PIN_XSHUT_2      19</span>
+<span class="cp">#define PIN_LED          21</span>
+<span class="cp">#define PIN_DOOR_LEFT    22</span>
+<span class="cp">#define PIN_DOOR_RIGHT   23</span>
+
+<span class="n">TwoWire</span><span class="w"> </span><span class="n">sensorBus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TwoWire</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="n">TwoWire</span><span class="w"> </span><span class="n">gaugeBus</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">TwoWire</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">VL53L1X</span><span class="w"> </span><span class="n">sensor1</span><span class="p">,</span><span class="w"> </span><span class="n">sensor2</span><span class="p">;</span>
+<span class="n">SFE_MAX1704X</span><span class="w"> </span><span class="n">gauge</span><span class="p">;</span>
+
+<span class="kt">bool</span><span class="w"> </span><span class="nf">startSensor</span><span class="p">(</span><span class="n">VL53L1X</span><span class="o">&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">xshutPin</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">address</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">xshutPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w">   </span><span class="c1">// release this sensor only</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="w">  </span><span class="n">s</span><span class="p">.</span><span class="n">setBus</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sensorBus</span><span class="p">);</span>
+<span class="w">  </span><span class="n">s</span><span class="p">.</span><span class="n">setTimeout</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">s</span><span class="p">.</span><span class="n">init</span><span class="p">())</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">  </span><span class="n">s</span><span class="p">.</span><span class="n">setAddress</span><span class="p">(</span><span class="n">address</span><span class="p">);</span><span class="w">          </span><span class="c1">// move it off the shared 0x29</span>
+<span class="w">  </span><span class="n">s</span><span class="p">.</span><span class="n">startContinuous</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">PIN_PIR</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT</span><span class="p">);</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">PIN_DOOR_LEFT</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w">    </span><span class="c1">// no pull-up on the board</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">PIN_DOOR_RIGHT</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">PIN_LED</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">PIN_LED</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w">             </span><span class="c1">// on while testing; set LOW to save battery</span>
+
+<span class="w">  </span><span class="c1">// Hold both distance sensors off, then power the switched supply.</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">PIN_XSHUT_1</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">PIN_XSHUT_2</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">PIN_XSHUT_1</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">PIN_XSHUT_2</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">PIN_SENSOR_POWER</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">PIN_SENSOR_POWER</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">     </span><span class="c1">// LOW = on</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w">                              </span><span class="c1">// let the supply settle</span>
+
+<span class="w">  </span><span class="n">sensorBus</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">PIN_SDA</span><span class="p">,</span><span class="w"> </span><span class="n">PIN_SCL</span><span class="p">);</span>
+<span class="w">  </span><span class="n">sensorBus</span><span class="p">.</span><span class="n">setClock</span><span class="p">(</span><span class="mi">400000</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">"Sensor 1: %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">startSensor</span><span class="p">(</span><span class="n">sensor1</span><span class="p">,</span><span class="w"> </span><span class="n">PIN_XSHUT_1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x30</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">"ok"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">"FAILED"</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">"Sensor 2: %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">startSensor</span><span class="p">(</span><span class="n">sensor2</span><span class="p">,</span><span class="w"> </span><span class="n">PIN_XSHUT_2</span><span class="p">,</span><span class="w"> </span><span class="mh">0x32</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">"ok"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">"FAILED"</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">gaugeBus</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">PIN_GAUGE_SDA</span><span class="p">,</span><span class="w"> </span><span class="n">PIN_GAUGE_SCL</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">gauge</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">gaugeBus</span><span class="p">))</span><span class="w"> </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"No battery gauge (normal on Hardwired)"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">printf</span><span class="p">(</span><span class="s">"dist1=%u mm  dist2=%u mm  motion=%d  leftMagnet=%d  rightMagnet=%d  battery=%.0f%%</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span>
+<span class="w">                </span><span class="n">sensor1</span><span class="p">.</span><span class="n">read</span><span class="p">(),</span><span class="w"> </span><span class="n">sensor2</span><span class="p">.</span><span class="n">read</span><span class="p">(),</span>
+<span class="w">                </span><span class="n">digitalRead</span><span class="p">(</span><span class="n">PIN_PIR</span><span class="p">),</span>
+<span class="w">                </span><span class="n">digitalRead</span><span class="p">(</span><span class="n">PIN_DOOR_LEFT</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="p">,</span>
+<span class="w">                </span><span class="n">digitalRead</span><span class="p">(</span><span class="n">PIN_DOOR_RIGHT</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="p">,</span>
+<span class="w">                </span><span class="n">gauge</span><span class="p">.</span><span class="n">getSOC</span><span class="p">());</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Turn the LED off on battery</p>
+<p>This example leaves the power LED on so you can see the board is running. On the Battery-Powered version, turn it off (<code>digitalWrite(PIN_LED, LOW)</code>) once you're done testing, and before deep sleep.</p>
+</div>
+</div>
+<div class="tabbed-block">
+<p>This sets up the motion sensor, both door sensors, the LED, and the distance sensors' power. ESPHome doesn't have a built-in VL53L1X component, so you'll need to add one yourself as an external component. Power the sensors and set their addresses as described in <a href="#rules-for-your-code">Rules for Your Code</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">esphome</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">crosswalk-custom</span>
+<span class="w">  </span><span class="nt">on_boot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">800</span>
+<span class="w">    </span><span class="nt">then</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">output.turn_on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">distance_sensor_power</span>
+
+<span class="nt">esp32</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">variant</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esp32c6</span>
+<span class="w">  </span><span class="nt">board</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esp32-c6-devkitc-1</span>
+<span class="w">  </span><span class="nt">framework</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esp-idf</span>
+
+<span class="nt">logger</span><span class="p">:</span>
+<span class="nt">api</span><span class="p">:</span>
+<span class="nt">ota</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">esphome</span>
+<span class="nt">wifi</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ssid</span><span class="p">:</span><span class="w"> </span><span class="kt">!secret</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wifi_ssid</span>
+<span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="kt">!secret</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wifi_password</span>
+
+<span class="nt">output</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># GPIO2 is LOW = on, so invert it: "on" in ESPHome powers the sensors.</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gpio</span>
+<span class="w">    </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">distance_sensor_power</span>
+<span class="w">    </span><span class="nt">pin</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GPIO2</span>
+<span class="w">      </span><span class="nt">inverted</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gpio</span>
+<span class="w">    </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">power_led</span>
+<span class="w">    </span><span class="nt">pin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GPIO21</span>
+
+<span class="nt">binary_sensor</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gpio</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Motion"</span>
+<span class="w">    </span><span class="nt">device_class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">motion</span>
+<span class="w">    </span><span class="nt">pin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GPIO3</span>
+
+<span class="w">  </span><span class="c1"># The hall sensors pull LOW when a magnet is near, and need the</span>
+<span class="w">  </span><span class="c1"># internal pull-up. Inverted so ON = magnet detected.</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gpio</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Left</span><span class="nv"> </span><span class="s">Door</span><span class="nv"> </span><span class="s">Magnet"</span>
+<span class="w">    </span><span class="nt">pin</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GPIO22</span>
+<span class="w">      </span><span class="nt">inverted</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">mode</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">input</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">pullup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gpio</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Right</span><span class="nv"> </span><span class="s">Door</span><span class="nv"> </span><span class="s">Magnet"</span>
+<span class="w">    </span><span class="nt">pin</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GPIO23</span>
+<span class="w">      </span><span class="nt">inverted</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">mode</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">input</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="nt">pullup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="nt">light</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">binary</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Power</span><span class="nv"> </span><span class="s">LED"</span>
+<span class="w">    </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">power_led</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Battery-Powered sensors and ESPHome</p>
+<p>ESPHome keeps Wi-Fi on all the time, which drains the battery quickly. ESPHome works best on the Hardwired version. On the Battery-Powered version, look at ESPHome's <code>deep_sleep</code> component, with the motion sensor (GPIO3) as the wake-up pin.</p>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<div class="grid cards">
+<ul>
+<li><a href="../sensor-flashing/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> <strong>Reinstall the Official Firmware</strong></a></li>
+<li><a href="../sensor-troubleshooting/"><strong>Sensor Troubleshooting</strong></a></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../sensor-troubleshooting/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Troubleshooting">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Troubleshooting
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../support/" class="md-footer__link md-footer__link--next" aria-label="Next: Support">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Support
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Apex Sensor Labs LLC. Zigbee® is a registered trademark of the Connectivity Standards Alliance. ESP32® and ESP-NOW™ are trademarks of Espressif Systems. Apex Sensor Labs LLC is not affiliated with either organization.
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/apexsensorlabsllc" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "content.code.copy", "toc.follow", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
