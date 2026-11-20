@@ -52,6 +52,17 @@ Crosswalk sensors do **not** update over the air. To update a sensor, connect it
 
 ---
 
+## Beta Firmware
+
+Want to try new features early? Beta firmware is available for the Gateway and both sensor versions. It's installed over USB from the **Beta firmware** section at the bottom of the [Gateway Flashing](./gateway-flashing.md) and [Sensor Flashing](./sensor-flashing.md) pages. It's never sent to your Gateway automatically.
+
+The Gateway and sensors must **all** be on the beta, or **all** on the regular firmware. They don't work together when mixed.
+
+!!! warning "On the beta? Read this before clicking Install Update"
+    A Gateway running beta firmware will show **"Update available: 1.2.13"**. That's the regular release, not a newer version. Clicking **Install Update** takes your Gateway off the beta, and your beta sensors will stop working with it until you reinstall the regular firmware on them too. To stop the message appearing, untick **Auto-check for updates** in the **Firmware** section of **Settings**.
+
+---
+
 <div class="grid cards" markdown>
 
 -   [:octicons-arrow-right-24: **Gateway Troubleshooting**](./gateway-troubleshooting.md)

@@ -1,6 +1,6 @@
 {
   "name": "Apex Crosswalk",
-  "version": "1.0.0",
+  "version": "0x1A",
   "builds": [
     {
       "chipFamily": "ESP32-C6",

@@ -55,6 +55,38 @@ You don't need to open the case to flash the sensor. The BOOT button sits under 
 
 ---
 
+??? warning "Beta firmware (for testers)"
+    Beta firmware lets you try new features before they're released. It's still being tested, so it may have bugs. **If you're setting up your sensor for the first time, use the regular install button above.**
+
+    **Current beta:** lets you set the sensor's detection distance from the Gateway, for doorways taller than a standard door.
+
+    !!! danger "Put your Gateway and all your sensors on the beta together"
+        A beta sensor doesn't work with a Gateway on the regular firmware, and a regular sensor doesn't work with a beta Gateway. Install the beta on your Gateway from the [Gateway Flashing](./gateway-flashing.md) page, and on **every** sensor.
+
+    To install it, follow the same steps above, but choose the tab that matches your sensor and click its beta button in step 2 instead:
+
+    === "Battery-Powered"
+
+        <div align="center">
+            <esp-web-install-button manifest="../sensor-beta-manifest.json">
+                <button slot="install" class="md-button">Install Crosswalk Sensor (Beta)</button>
+            </esp-web-install-button>
+        </div>
+
+    === "Hardwired"
+
+        <div align="center">
+            <esp-web-install-button manifest="../cw-hw-beta-manifest.json">
+                <button slot="install" class="md-button">Install Crosswalk Sensor (Hardwired, Beta)</button>
+            </esp-web-install-button>
+        </div>
+
+    Just like the regular firmware, make sure you pick the version that matches your sensor.
+
+    **Going back to the regular firmware:** Connect each sensor to your computer again and use the regular install button above. Sensors don't update on their own, so they stay on the beta until you do. Put your Gateway back on the regular firmware too (see [Gateway Flashing](./gateway-flashing.md)).
+
+---
+
 <div class="grid cards" markdown>
 
 -   [:octicons-arrow-right-24: **Next Step: Pairing & Configuration (Step 2)**](./sensor-config.md)
