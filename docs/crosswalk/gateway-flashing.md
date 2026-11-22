@@ -57,7 +57,7 @@ To flash the Gateway, you need to hold down its BOOT button while you plug it in
 ??? warning "Beta firmware (for testers)"
     Beta firmware lets you try new features before they're released. It's still being tested, so it may have bugs. **If you're setting up your Gateway for the first time, use the regular install button above.**
 
-    **Current beta: 1.3.0.** Adds a **Mounting** setting for each sensor, for doorways taller than a standard door: **Standard (6'8" door)**, **7 ft door**, **8 ft door**, and **Custom (advanced)**.
+    **Current beta: 1.3.1.** Adds a **Mounting** setting for each sensor, for doorways taller than a standard door: **Standard (6'8" door)**, **7 ft door**, **8 ft door**, and **Custom (advanced)**.
 
     !!! danger "Put your Gateway and all your sensors on the beta together"
         A beta Gateway doesn't work with sensors on the regular firmware, and a regular Gateway doesn't work with beta sensors. If you install the beta on your Gateway, install it on **every** sensor too. See [Sensor Flashing](./sensor-flashing.md).

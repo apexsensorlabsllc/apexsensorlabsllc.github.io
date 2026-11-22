@@ -1,6 +1,6 @@
 {
   "name": "Crosswalk Sensor (Hardwired, Beta)",
-  "version": "0x8B-beta",
+  "version": "0x8D-beta",
   "builds": [
     {
       "chipFamily": "ESP32-C6",

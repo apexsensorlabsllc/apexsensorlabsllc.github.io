@@ -1,6 +1,6 @@
 {
   "name": "Apex Crosswalk (Beta)",
-  "version": "0x1B-beta",
+  "version": "0x1D-beta",
   "builds": [
     {
       "chipFamily": "ESP32-C6",
