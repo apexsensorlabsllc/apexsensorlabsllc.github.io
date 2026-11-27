@@ -1,0 +1,5 @@
+{
+  "version": "1.2.13",
+  "url": "https://docs.apexsensorlabs.com/crosswalk/firmware/gateway.bin",
+  "notes": "Easier pairing (stays on until you turn it off), correct Last Seen times in Home Assistant, and a smoother Wi-Fi setup."
+}
