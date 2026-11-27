@@ -1,6 +1,6 @@
 {
   "name": "Crosswalk Gateway (Beta)",
-  "version": "1.3.1-beta",
+  "version": "1.3.3-beta",
   "builds": [
     {
       "chipFamily": "ESP32-S3",
