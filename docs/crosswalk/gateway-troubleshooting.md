@@ -24,6 +24,15 @@ If you've reconnected your phone to your home Wi-Fi but the dashboard won't load
 
 ---
 
+## Sensors Stopped Reporting
+If sensors that were working stop updating, and their **Last Seen** time stops changing, even though people are walking past:
+
+1.  **Restart the Gateway:** Unplug it, wait 10 seconds, and plug it back in. Your sensors should start reporting again the next time they wake up, for example when someone walks past.
+2.  **Why this happens:** Your router can move to a different Wi-Fi channel on its own, for example after it restarts or updates. On firmware 1.2.13, the Gateway can then lose contact with your sensors until it's restarted. The Gateway beta (1.3.3) fixes this.
+3.  **Still not reporting?** See [Sensor Troubleshooting](./sensor-troubleshooting.md).
+
+---
+
 ## MQTT Connection Problems
 To check your MQTT connection, open the **Status** tab on your `apex.local` dashboard and look at the **MQTT** line.
 
